@@ -10,7 +10,11 @@ import pro5 from '../assets/pro5.jpeg';
 import pro6 from '../assets/pro6.jpeg';
 import pro7 from '../assets/pro7.jpeg';
 import pro8 from '../assets/pro8.jpeg';
-const prototypes = [pro1, pro2, pro6, pro4, pro5, pro3, pro7, pro8];
+import p1 from '../assets/p1.jpeg';
+import p2 from '../assets/p2.jpeg';
+import p3 from '../assets/p3.jpeg';
+
+const prototypes = [p1,pro1, pro2,p2, pro6,p3, pro4, pro5, pro3, pro7, pro8];
 
 export default function AnimatedIntro() {
   const [showSignature, setShowSignature] = useState(true);

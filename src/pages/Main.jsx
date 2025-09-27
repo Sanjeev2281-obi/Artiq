@@ -13,21 +13,36 @@ function Main() {
     <div className=" font-[Outfit] w-full overflow-x-hidden" >
 
       <div><Prototype /></div>
-      <div className="px-[20px] md:px-[40px]">
-        <div><Second /></div>
-        <div><About /></div>
+      <div className="bg-white text-gray-800">
+      
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
 
-        <div><Serives /></div>
-       
-        <div><About2 /></div>
-       
-        
-      </div>
-    <div><Footer /></div>
-        
+      
+          <section className="py-15 border-b border-gray-200">
+            <Second />
+          </section>
 
-       
+          {/* About Us */}
+          <section className="py-20 border-b border-gray-200">
+            <About />
+          </section>
+
+          {/* Services */}
+          <section className="py-20 border-b border-gray-200">
+            <Serives />
+          </section>
+          <section className="py-20 border-b border-gray-200">
+            <About2 />
+          </section>
+          {/* Premium Sections */}
          
+        </div>
+      </div>
+      <div><Footer /></div>
+
+
+
+
     </div >
   )
 }
