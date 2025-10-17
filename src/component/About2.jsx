@@ -12,7 +12,7 @@ const fadeInUp = {
 
 export default function PremiumSections() {
   return (
-    <div className="px-6 md:px-16 py-10 space-y-20">
+    <div id="Artist"className="px-6 md:px-16 py-10 space-y-20">
 
       {/* Workshop */}
       <motion.div

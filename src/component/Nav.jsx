@@ -25,9 +25,10 @@ function Nav() {
                     <a href="#about-us" className="font-[outfit] text-black" onClick={() => setOpen(false)}>About Us</a>
                     <a href="" className="font-[outfit] text-black" onClick={() => setOpen(false)}>Projects</a>
                     <a href="#services" className="font-[outfit] text-black" onClick={() => setOpen(false)}>Services</a>
-                    <a href="#contact" className="font-[outfit] text-black" onClick={() => setOpen(false)}>Artists</a>
+                    <a href="#Artist" className="font-[outfit] text-black" onClick={() => setOpen(false)}>Artists</a>
                    
-                    <a  className="font-[outfit] text-black" onClick={() => setOpen(false)}>Contact</a>
+                   
+                    <a  href="#footer" className="font-[outfit] text-black" onClick={() => setOpen(false)}>Contact</a>
                      
                     </div>
 

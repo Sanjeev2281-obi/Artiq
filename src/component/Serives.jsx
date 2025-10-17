@@ -77,7 +77,7 @@ function Services() {
             >
               {/* Dot - now black */}
               <motion.div
-                className="absolute -left-[37px] w-5 h-5 bg-black rounded-full border-4 border-white shadow-md"
+                className="absolute -left-[37px] w-5 h-5 bg-gray-300 rounded-full border-4 border-white shadow-md"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{ delay: index * 0.3 + 0.2, duration: 0.4 }}

@@ -1,20 +1,26 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
+
 import signature from '../assets/img.jpeg'; 
 import main from '../assets/main.png';
-import pro1 from '../assets/pro1.jpeg';
-import pro2 from '../assets/pro2.jpeg';
-import pro3 from '../assets/pro3.jpeg';
-import pro4 from '../assets/pro4.jpeg';
-import pro5 from '../assets/pro5.jpeg';
-import pro6 from '../assets/pro6.jpeg';
-import pro7 from '../assets/pro7.jpeg';
-import pro8 from '../assets/pro8.jpeg';
 import p1 from '../assets/p1.jpeg';
 import p2 from '../assets/p2.jpeg';
 import p3 from '../assets/p3.jpeg';
+import p4 from '../assets/p4.jpeg';
+import p5 from '../assets/p5.jpeg';
+import p6 from '../assets/p6.jpeg';
+import p7 from '../assets/p7.jpeg';
+import p8 from '../assets/p8.jpeg';
+import p9 from '../assets/p9.jpeg';
+import p10 from '../assets/p10.jpeg';
+import p11 from '../assets/p11.jpeg';
+import p12 from '../assets/p12.jpeg';
+import p13 from '../assets/p13.jpeg';
+import p14 from '../assets/p14.jpeg';
+import p15 from '../assets/p15.jpeg';
+import p16 from '../assets/p16.jpeg';
 
-const prototypes = [p1,pro1, pro2,p2, pro6,p3, pro4, pro5, pro3, pro7, pro8];
+const prototypes = [p11,p7,p2,p5,p8,p4,p6,p9,p10,p1,p12,p13,p14,p15,p16];
 
 export default function AnimatedIntro() {
   const [showSignature, setShowSignature] = useState(true);
@@ -105,7 +111,8 @@ function ZoomImage({ src, index }) {
       ref={ref}
       src={src}
       alt={`Prototype ${index + 1}`}
-      className="w-90 h-[350px] shadow-lg flex-shrink-0 transition hover:scale-105 duration-300 px-6 py-3 rounded-[40px]"
+      className=" w-100 h-100 object-cover shadow-lg flex-shrink-0 transition hover:scale-105 duration-300 px-6 py-3 rounded-[40px]"
+
       draggable={false}
       initial={{ scale: 0.8, opacity: 0 }}
       animate={isInView ? { scale: 1, opacity: 1 } : {}}
