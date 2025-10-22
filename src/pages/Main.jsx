@@ -3,7 +3,7 @@ import Hero from '../component/Hero'
 import About from '../component/About'
 import Serives from '../component/Serives'
 import Prototype from '../component/Prototype'
-import Footer from '../component/footer'
+import Footer from '../component/Footer'
 import Second from '../component/second'
 import About2 from '../component/About2'
 
