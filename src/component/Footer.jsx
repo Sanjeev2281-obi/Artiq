@@ -1,84 +1,86 @@
-import React from 'react';
-import img from '../assets/in.png';
-import what from '../assets/what.webp'; 
-import email from '../assets/e3.jpg';
-import { useState } from 'react';
-export default function Footer() {
+import React from "react";
+import img from "../assets/in.png";
+import what from "../assets/what.webp";
+import email from "../assets/e3.jpg";
+import { useForm, ValidationError } from "@formspree/react";
 
-   const [result, setResult] = React.useState("");
-  
-    const onSubmit = async (event) => {
-      event.preventDefault();
-      setResult("Sending....");
-      const formData = new FormData(event.target);
-  
-      formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
-  
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
-      });
-  
-      const data = await response.json();
-  
-      if (data.success) {
-        setResult("Form Submitted Successfully");
-        event.target.reset();
-      } else {
-        console.log("Error", data);
-        setResult(data.message);
-      }
-    };
+export default function Footer() {
+  const [state, handleSubmit] = useForm("xqagoqqb"); 
+
+  if (state.succeeded) {
+    return (
+      <div className="bg-black text-white py-20 text-center">
+        <h2 className="text-3xl font-semibold">✅ Message Sent Successfully!</h2>
+        <p className="text-gray-300 mt-2">Thank you for contacting Artiq. We’ll reply soon.</p>
+      </div>
+    );
+  }
 
   return (
-    <div id="footer" className="bg-black text-white py-16 px-8  mt-[50px] " >
+    <div id="footer" className="bg-black text-white py-16 px-8 mt-[50px]">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-
-       
+        {/* LEFT SIDE */}
         <div>
           <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
-          <p className="mb-4 text-gray-300">Feel free to reach out for custom artworks, collaborations or any queries.</p>
+          <p className="mb-4 text-gray-300">
+            Feel free to reach out for custom artworks, collaborations or any queries.
+          </p>
           <div className="space-y-4 text-gray-400">
-            <p><strong>Email:</strong> artiqstudio@gmail.com</p>
-            <p><strong>Phone:</strong> +91 98765 43210</p>
+            <p><strong>Email:</strong> info@artiqora.co</p>
+            <p><strong>Phone:</strong> +91 63696992363</p>
             <p><strong>Location:</strong> Chennai, India</p>
           </div>
-          <div className="flex mt-7 ">
-             <a href="https://www.instagram.com/artiq_studio_/"><img className="w-10 mt-0.5"src={img} alt="" /></a>
-             <a href="http://wa.me/9003106936" ><img className="w-16 -mt-2.5" src={what} alt="" /></a>
-             <a href="" className="w-12 -mt-1"><img src={email} alt="" /></a>
-   
+
+          <div className="flex mt-7 space-x-4">
+            <a href="https://www.instagram.com/artiq_studio_/">
+              <img className="w-10" src={img} alt="Instagram" />
+            </a>
+            <a href="http://wa.me/9003106936">
+              <img className="w-12" src={what} alt="WhatsApp" />
+            </a>
+            <a href="mailto:info@artiqora.co">
+              <img className="w-10" src={email} alt="Email" />
+            </a>
           </div>
         </div>
 
+        {/* RIGHT SIDE — CONTACT FORM */}
         <div>
-         
-        <form onSubmit={onSubmit} className="space-y-4">
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="w-full bg-gray-800 text-white border border-gray-600 rounded-md p-3 focus:outline-none "
-            required
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="w-full bg-gray-800 text-white border border-gray-600 rounded-md p-3 focus:outline-none "
-            required
-          />
-          <textarea
-            placeholder="Your Message"
-            rows="5"
-            className="w-full bg-gray-800 text-white border border-gray-600 rounded-md p-3 focus:outline-none "
-            required
-          ></textarea>
-          <button
-            type="submit"
-            className="bg-white hover:bg-gray-300 cursor-pointer text-black font-semibold py-2 px-6 rounded-md transition duration-300"
-          >
-            Send Message
-          </button>
-        </form>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <input
+              type="text"
+              name="name" // ✅ Added
+              placeholder="Your Name"
+              className="w-full bg-gray-800 text-white border border-gray-600 rounded-md p-3 focus:outline-none"
+              required
+            />
+
+            <input
+              type="email"
+              name="email" // ✅ Added
+              placeholder="Your Email"
+              className="w-full bg-gray-800 text-white border border-gray-600 rounded-md p-3 focus:outline-none"
+              required
+            />
+            <ValidationError prefix="Email" field="email" errors={state.errors} />
+
+            <textarea
+              name="message" // ✅ Added
+              placeholder="Your Message"
+              rows="5"
+              className="w-full bg-gray-800 text-white border border-gray-600 rounded-md p-3 focus:outline-none"
+              required
+            ></textarea>
+            <ValidationError prefix="Message" field="message" errors={state.errors} />
+
+            <button
+              type="submit"
+              disabled={state.submitting}
+              className="bg-white hover:bg-gray-300 cursor-pointer text-black font-semibold py-2 px-6 rounded-md transition duration-300"
+            >
+              {state.submitting ? "Sending..." : "Send Message"}
+            </button>
+          </form>
         </div>
       </div>
     </div>
