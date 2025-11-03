@@ -20,7 +20,7 @@ import p14 from '../assets/p14.jpeg';
 import p15 from '../assets/p15.jpeg';
 import p16 from '../assets/p16.jpeg';
 
-const prototypes = [p11,p7,p2,p5,p8,p4,p6,p9,p10,p1,p12,p13,p14,p15,p16];
+const prototypes = [p2,p7,p6,p8,p5,p4,p11,p9,p10,p1,p12,p13,p14,p15,p16];
 
 export default function AnimatedIntro() {
   const [showSignature, setShowSignature] = useState(true);

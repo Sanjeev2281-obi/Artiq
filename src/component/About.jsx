@@ -6,7 +6,7 @@ function About() {
       <div className="mt-[40px] mb-[20px] md:w-[600px] text-5xl font-bold text-gray-400 ml-4">
         About Us
       </div>
-      <div className="mt-[20px]   text-gray-600 sm:mt-[5px]">
+      <div className="mt-[20px]   text-gray-600 sm:mt-[5px] shadow-lg ">
         <div className="mx-5">
           <p className="my-2">Rooted in tradition, inspired by culture — our creations are expressions of artistic legacy.</p>
           <p className="my-3 text-xl font-semibold">Want to shape your own idea?</p>
