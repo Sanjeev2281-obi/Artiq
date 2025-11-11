@@ -1,13 +1,22 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const textVariant = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (delay) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay, duration: 0.6, ease: "easeOut" },
-  }),
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.25, // smooth stagger for cards
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.6, ease: "easeOut" } 
+  },
 };
 
 function Services() {
@@ -19,79 +28,38 @@ function Services() {
   ];
 
   return (
-    <div id="services" className="mt-[30px] px-6 md:px-16">
-
+    <section id="services" className="mt-16 px-6 md:px-16">
       {/* Heading */}
       <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="text-center md:text-left mb-12"
+      >
+        <h2 className="text-5xl font-bold text-gray-300">What We</h2>
+        <h2 className="text-5xl font-bold text-gray-400 mt-2">Offer</h2>
+      </motion.div>
+
+      {/* Services Cards */}
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={textVariant}
-        custom={0}
-        className="md:flex md:items-start md:justify-between"
       >
-        {/* Left - Heading */}
-        <div className="w-full md:w-[40%]">
-          <p className="text-5xl font-bold text-gray-400 flex">What We</p>
-          <p className="ml-0 md:ml-[190px] text-gray-400 mt-2">Offer</p>
-        </div>
-
-        {/* Desktop Content */}
-        <div className="hidden md:block w-full md:w-[55%] max-w-xl">
-          {services.map((text, index) => (
-            <motion.div
-              key={index}
-              className="bg-white/5 backdrop-blur-sm p-4 rounded-xl mt-4 hover:scale-105 hover:shadow-lg transition-all duration-300"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={textVariant}
-              custom={index * 0.3 + 0.2}
-            >
-              <p className="mt-2 text-gray-700">{text}</p>
-            </motion.div>
-          ))}
-        </div>
+        {services.map((text, index) => (
+          <motion.div
+            key={index}
+            className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-md hover:scale-105 hover:shadow-xl transition-transform duration-400 cursor-default"
+            variants={cardVariants}
+          >
+            <p className="text-black-400 text-lg md:text-base">{text}</p>
+          </motion.div>
+        ))}
       </motion.div>
-
-      {/* Mobile View - Vertical Line */}
-      <div className="relative md:hidden mt-10">
-        {/* Vertical Line */}
-        <motion.div
-          className="absolute left-3 top-0 w-[2px] bg-gray-300"
-          initial={{ height: 0 }}
-          whileInView={{ height: "100%" }}
-          transition={{ duration: 1 }}
-        ></motion.div>
-
-        <div className="ml-10 space-y-10">
-          {services.map((text, index) => (
-            <motion.div
-              key={index}
-              className="relative flex items-start"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={textVariant}
-              custom={index * 0.3 + 0.2}
-            >
-              {/* Dot - now black */}
-              <motion.div
-                className="absolute -left-[37px] w-5 h-5 bg-gray-300 rounded-full border-4 border-white shadow-md"
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                transition={{ delay: index * 0.3 + 0.2, duration: 0.4 }}
-              ></motion.div>
-
-              {/* Text */}
-              <div className="bg-white/5 backdrop-blur-sm p-4 rounded-xl shadow-sm">
-                <p className="text-gray-700">{text}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </div>
+    </section>
   );
 }
 
