@@ -31,7 +31,7 @@ export default function Footer() {
             <p><strong>Location:</strong> Chennai, India</p>
           </div>
           <div className="flex mt-7 space-x-6">
-            {/* Instagram */}
+
             <a
               href="https://www.instagram.com/arti_qora/"
               target="_blank"
