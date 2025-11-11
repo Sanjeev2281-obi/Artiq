@@ -23,7 +23,7 @@ export default function Footer() {
         <div>
           <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
           <p className="mb-4 text-gray-300">
-            Feel free to reach out for custom artworks, collaborations or any queries.
+            Feel free to reach out for custom artworks, collaborations or any queries
           </p>
           <div className="space-y-4 text-gray-400">
             <p><strong>Email:</strong> info@artiqora.co</p>
