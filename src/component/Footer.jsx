@@ -1,7 +1,5 @@
 import React from "react";
-import img from "../assets/in.png";
-import what from "../assets/what.webp";
-import email from "../assets/e3.jpg";
+
 import { useForm, ValidationError } from "@formspree/react";
 import { FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa";
 export default function Footer() {
@@ -67,7 +65,7 @@ export default function Footer() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
-              name="name" // ✅ Added
+              name="name" 
               placeholder="Your Name"
               className="w-full bg-gray-800 text-white border border-gray-600 rounded-md p-3 focus:outline-none"
               required
@@ -75,7 +73,7 @@ export default function Footer() {
 
             <input
               type="email"
-              name="email" // ✅ Added
+              name="email" 
               placeholder="Your Email"
               className="w-full bg-gray-800 text-white border border-gray-600 rounded-md p-3 focus:outline-none"
               required
@@ -83,7 +81,7 @@ export default function Footer() {
             <ValidationError prefix="Email" field="email" errors={state.errors} />
 
             <textarea
-              name="message" // ✅ Added
+              name="message" 
               placeholder="Your Message"
               rows="5"
               className="w-full bg-gray-800 text-white border border-gray-600 rounded-md p-3 focus:outline-none"
