@@ -36,9 +36,7 @@ export default function AnimatedIntro() {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+ 
 
   useEffect(() => {
     if (!showSignature) {

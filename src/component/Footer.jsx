@@ -34,7 +34,7 @@ export default function Footer() {
               href="https://www.instagram.com/arti_qora/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-gray-300 transition-colors duration-300  transition-transform hover:scale-110"
+              className="text-white hover:text-gray-300 transition-colors duration-300 hover:scale-110"
             >
               <FaInstagram size={30} />
             </a>
@@ -44,7 +44,7 @@ export default function Footer() {
               href="http://wa.me/919003106936"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-gray-300 transition-colors duration-300  transition-transform hover:scale-110"
+              className="text-white hover:text-gray-300 transition-colors duration-300 hover:scale-110"
             >
               <FaWhatsapp size={30} />
             </a>
@@ -52,7 +52,7 @@ export default function Footer() {
             {/* Email */}
             <a
               href="mailto:info@artiqora.co"
-              className="text-white hover:text-gray-300 transition-colors duration-300  transition-transform hover:scale-110"
+              className="text-white hover:text-gray-300 duration-300  transition-transform hover:scale-110"
             >
               <FaEnvelope size={30} />
             </a>
