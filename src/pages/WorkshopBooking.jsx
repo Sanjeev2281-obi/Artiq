@@ -275,7 +275,7 @@ const WorkshopBooking = () => {
                     }}
                     className="mt-4 bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-900"
                   >
-                    Book Another Workshop
+                    Book AnotherWorkshop
                   </button>
                 </div>
               )}
