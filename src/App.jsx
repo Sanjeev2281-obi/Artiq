@@ -1,9 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Nav from './component/Nav'
 import Home from './pages/Main'
-import About from './component/About'
-import WorkshopBooking from './pages/WorkShopBooking'
+import WorkshopBooking from './pages/WorkshopBooking'
 
 function App() {
   return (
