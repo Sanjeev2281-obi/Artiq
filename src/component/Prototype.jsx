@@ -19,6 +19,7 @@ import p14 from '../assets/p14.jpeg';
 import p15 from '../assets/p15.jpeg';
 import p16 from '../assets/p16.jpeg';
 import artiqlogo from '../assets/artiqlogo.jpeg';
+import popup from '../assets/popup.png';
 
 const prototypes = [p2,p7,p6,p8,p5,p4,p11,p9,p10,p1,p12,p13,p14,p15,p16];
 
@@ -62,13 +63,13 @@ export default function AnimatedIntro() {
             transition={{ duration: 1 }}
           >
             <motion.img
-              src={artiqlogo}
+              src={popup}
               alt="Main"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 1 }}
-              className="w-190 h-auto object-contain "
+              className="w-180 h-auto object-contain"
               draggable={false}
             />
           </motion.div>
@@ -79,9 +80,9 @@ export default function AnimatedIntro() {
         <div className="w-full min-h-screen bg-white flex flex-col items-center justify-start overflow-hidden pt-10">
          
           <img
-            src={artiqlogo}
+            src={popup}
             alt="Main Top"
-            className="top-4 left-4 w-24 h-auto z-100 fixed"
+            className="fixed top-2 left-2 w-26 h-25 rounded-full  z-50"
             draggable={false}
           />
 

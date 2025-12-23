@@ -25,7 +25,7 @@ export default function Footer() {
           </p>
           <div className="space-y-4 text-gray-400">
             <p><strong>Email:</strong> info@artiqora.co</p>
-            <p><strong>Phone:</strong> +91 63696992363</p>
+            <p><strong>Phone:</strong> +91 6369692363</p>
             <p><strong>Location:</strong> Chennai, India</p>
           </div>
           <div className="flex mt-7 space-x-6">
