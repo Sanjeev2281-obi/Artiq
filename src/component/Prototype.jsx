@@ -5,7 +5,6 @@ import signature from '../assets/img.jpeg';
 import main from '../assets/main.png';
 import p1 from '../assets/p1.jpeg';
 import p2 from '../assets/p2.jpeg';
-import p3 from '../assets/p3.jpeg';
 import p4 from '../assets/p4.jpeg';
 import p5 from '../assets/p5.jpeg';
 import p6 from '../assets/p6.jpeg';
@@ -19,6 +18,7 @@ import p13 from '../assets/p13.jpeg';
 import p14 from '../assets/p14.jpeg';
 import p15 from '../assets/p15.jpeg';
 import p16 from '../assets/p16.jpeg';
+import artiqlogo from '../assets/artiqlogo.jpeg';
 
 const prototypes = [p2,p7,p6,p8,p5,p4,p11,p9,p10,p1,p12,p13,p14,p15,p16];
 
@@ -62,13 +62,13 @@ export default function AnimatedIntro() {
             transition={{ duration: 1 }}
           >
             <motion.img
-              src={main}
+              src={artiqlogo}
               alt="Main"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 1 }}
-              className="w-170 h-auto object-contain "
+              className="w-170 h-auto object-contain"
               draggable={false}
             />
           </motion.div>
@@ -79,7 +79,7 @@ export default function AnimatedIntro() {
         <div className="w-full min-h-screen bg-white flex flex-col items-center justify-start overflow-hidden pt-10">
          
           <img
-            src={main}
+            src={artiqlogo}
             alt="Main Top"
             className="top-4 left-4 w-24 h-auto z-100 fixed"
             draggable={false}
