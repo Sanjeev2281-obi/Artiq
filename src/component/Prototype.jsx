@@ -69,7 +69,7 @@ export default function AnimatedIntro() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 1 }}
-              className="w-180 h-auto object-contain"
+              className="w-200 h-auto"
               draggable={false}
             />
           </motion.div>

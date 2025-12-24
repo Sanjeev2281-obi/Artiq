@@ -6,6 +6,7 @@ import Prototype from '../component/Prototype'
 import Footer from '../component/Footer'
 import Second from '../component/second'
 import About2 from '../component/About2'
+import FAQ from '../component/FAQ'
 
 
 function Main() {
@@ -35,7 +36,9 @@ function Main() {
             <About2 />
           </section>
           {/* Premium Sections */}
-         
+           <section className="py-20 border-b border-gray-200">
+            <FAQ/>
+          </section>
         </div>
       </div>
       <div><Footer /></div>
