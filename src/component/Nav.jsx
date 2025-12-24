@@ -62,7 +62,7 @@ function Nav() {
           >
             FAQ
           </button>
-           <NavLink to="/Workshop"  className="font-[outfit] text-black text-left">
+           <NavLink to="/Workshop"  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="font-[outfit] text-black text-left">
             Workshop
           </NavLink>
           <button

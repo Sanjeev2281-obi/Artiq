@@ -196,76 +196,102 @@ const WorkshopBooking = () => {
             </div>
           ) : (
             // Booking Form
-            <div className="w-full md:w-3/4 bg-white shadow-2xl p-6 md:p-10 rounded-2xl">
+            <div className="w-full max-w-xl mx-auto bg-white shadow-2xl p-6 md:p-10 rounded-2xl">
               {!success ? (
-                <form onSubmit={handlePayment} className="flex flex-col gap-3 text-gray-700">
+                <form
+                  onSubmit={handlePayment}
+                  noValidate
+                  className="flex flex-col gap-4 text-gray-700"
+                >
+                  {/* Header */}
                   <div className="flex justify-between items-center mb-2">
-                    <h2 className="text-2xl font-semibold text-gray-800">Workshop Booking</h2>
+                    <h2 className="text-2xl font-semibold text-gray-800">
+                      Workshop Booking
+                    </h2>
                     <button
                       type="button"
                       onClick={() => setShowForm(false)}
-                      className="text-gray-500 hover:text-gray-800"
+                      className="text-gray-500 hover:text-gray-800 text-xl"
                     >
                       ✕
                     </button>
                   </div>
 
-                  <label className="font-medium">Full Name</label>
-                  <input
-                    name="name"
-                    value={form.name}
-                    onChange={handleChange}
-                    placeholder="Enter your full name"
-                    className="border border-gray-400 p-2 rounded-lg focus:outline-none"
-                    required
-                  />
+                  {/* Name */}
+                  <div className="flex flex-col gap-1">
+                    <label className="font-medium">Full Name</label>
+                    <input
+                      name="name"
+                      value={form.name}
+                      onChange={handleChange}
+                      placeholder="Enter your full name"
+                      className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+                    />
+                  </div>
 
-                  <label className="font-medium">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    placeholder="Enter your email"
-                    className="border border-gray-400 p-2 rounded-lg focus:outline-none"
-                    required
-                  />
+                  {/* Email */}
+                  <div className="flex flex-col gap-1">
+                    <label className="font-medium">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      placeholder="Enter your email"
+                      className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+                    />
+                  </div>
 
-                  <label className="font-medium">Phone Number</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={form.phone}
-                    onChange={handleChange}
-                    placeholder="Enter your phone number"
-                    className="border border-gray-400 p-2 rounded-lg focus:outline-none"
-                    required
-                  />
+                  {/* Phone */}
+                  <div className="flex flex-col gap-1">
+                    <label className="font-medium">Phone Number</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={form.phone}
+                      onChange={handleChange}
+                      placeholder="Enter your phone number"
+                      className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+                    />
+                  </div>
 
-                  <label className="font-medium">Address (optional)</label>
-                  <textarea
-                    name="address"
-                    value={form.address}
-                    onChange={handleChange}
-                    placeholder="Your address"
-                    rows={3}
-                    className="border border-gray-400 p-2 rounded-lg focus:outline-none"
-                  />
+                  {/* Address */}
+                  <div className="flex flex-col gap-1">
+                    <label className="font-medium">Address (optional)</label>
+                    <textarea
+                      name="address"
+                      value={form.address}
+                      onChange={handleChange}
+                      placeholder="Your address"
+                      rows={3}
+                      className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+                    />
+                  </div>
 
+                  {/* Button */}
                   <button
                     type="submit"
                     disabled={loading}
-                    className="mt-3 bg-black text-white py-2 rounded-lg hover:bg-gray-900 transition-all"
+                    className="mt-4 bg-black text-white py-2 rounded-lg hover:bg-gray-900 transition-all disabled:opacity-60"
                   >
                     {loading ? "Processing..." : `Pay ₹${workshop.price}`}
                   </button>
                 </form>
               ) : (
+                /* SUCCESS UI */
                 <div className="text-center p-4">
-                  <h2 className="text-2xl font-bold text-green-600 mb-2">🎉 Payment Successful!</h2>
-                  <p className="text-gray-700 mb-1">Thank you for booking <b>{workshop.title}</b></p>
-                  <p className="text-gray-800 mb-4">Payment ID: <b>{paymentId}</b></p>
-                  <p className="text-gray-600">Please take a screenshot of this message for acknowledgment.</p>
+                  <h2 className="text-2xl font-bold text-green-600 mb-2">
+                    🎉 Payment Successful!
+                  </h2>
+                  <p className="text-gray-700 mb-1">
+                    Thank you for booking <b>{workshop.title}</b>
+                  </p>
+                  <p className="text-gray-800 mb-4">
+                    Payment ID: <b>{paymentId}</b>
+                  </p>
+                  <p className="text-gray-600">
+                    Please take a screenshot for acknowledgment.
+                  </p>
                   <button
                     onClick={() => {
                       setShowForm(false);
@@ -275,11 +301,12 @@ const WorkshopBooking = () => {
                     }}
                     className="mt-4 bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-900"
                   >
-                    Book AnotherWorkshop
+                    Book Another Workshop
                   </button>
                 </div>
               )}
             </div>
+
           )}
         </div>
       </div>
