@@ -21,7 +21,7 @@ import p16 from '../assets/p16.jpeg';
 import artiqlogo from '../assets/artiqlogo.jpeg';
 import popup from '../assets/popup.png';
 
-const prototypes = [p2,p7,p6,p8,p5,p4,p11,p9,p10,p1,p12,p13,p14,p15,p16];
+const prototypes = [p2,p7,p14,p6,p8,p5,p4,p11,p9,p10,p1,p12,p13,p15,p16];
 
 export default function AnimatedIntro() {
   const [showSignature, setShowSignature] = useState(true);
@@ -32,7 +32,7 @@ export default function AnimatedIntro() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSignature(false);
-        window.scrollTo(0, 0);
+        
     }, 2200); 
     return () => clearTimeout(timer);
   }, []);

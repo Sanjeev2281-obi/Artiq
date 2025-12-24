@@ -52,7 +52,7 @@ const FAQ = () => {
                 Find answers to common questions about our services and process
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
                 {faqData.map((item, index) => (
                     <div
                         key={index}
@@ -71,7 +71,7 @@ const FAQ = () => {
                                 className={`transform transition-transform duration-300 ${activeIndex === index ? "rotate-180" : ""
                                     }`}
                             >
-                                ⌄
+                                
                             </span>
                         </div>
 
