@@ -13,11 +13,11 @@ export default function Footer() {
       </div>
     );
   }
- 
+
   return (
-    <div id="footer" className="bg-black text-white py-16 px-8 mt-[50px]">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        {/* LEFT SIDE */}
+    <div id="footer" className="bg-black text-white py-16 px-8 mt-[50px] rounded-[100px] ">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center ">
+      
         <div>
           <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
           <p className="mb-4 text-gray-300">
@@ -29,7 +29,6 @@ export default function Footer() {
             <p><strong>Location:</strong> Chennai, India</p>
           </div>
           <div className="flex mt-7 space-x-6">
-
             <a
               href="https://www.instagram.com/arti_qora/"
               target="_blank"
@@ -38,8 +37,6 @@ export default function Footer() {
             >
               <FaInstagram size={30} />
             </a>
-
-            {/* WhatsApp */}
             <a
               href="http://wa.me/919003106936"
               target="_blank"

@@ -63,7 +63,7 @@ export default function AnimatedIntro() {
             transition={{ duration: 1 }}
           >
             <motion.img
-              src={popup}
+              src={main}
               alt="Main"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
