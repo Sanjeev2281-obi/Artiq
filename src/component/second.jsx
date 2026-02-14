@@ -1,19 +1,30 @@
 import React from 'react'
-
-export default function second() {
+export default function Second() {
   return (
-      <div className="flex flex-col md:flex-row justify-between  -mt-[350px] md:-mt-[110px]  ">
-      <div className="flex-col w-530  text-2xl  ">
-        <p className="mt- font-bold text-3xl ">ARTIQ </p>
-        <p className="text-[18px] text-gray-600">Art studio</p>
-        <p className="text-[18px] text-gray-600 mb-2"> Creating impact with art</p>
+    <div className="flex flex-col top-3 md:flex-row justify-between gap-6 md:gap-12 px-6 md:px-12 lg:px-20 mt-0 md:mt-20 lg:mt-32
+">
+      
+      {/* Left section */}
+      <div className="max-w-md">
+        <p className="font-bold text-2xl md:text-3xl">ARTIQ</p>
+
+        <p className="text-sm md:text-base text-gray-600">
+          Art studio
+        </p>
+
+        <p className="text-sm md:text-base text-gray-600">
+          Creating impact with art
+        </p>
       </div>
-      <div className="text-gray-600">
-        
-        <div className="mx-5 mt-1">
-          <p>At Artiq, we don't just make art - we shape emotions, stories and dreams into soulful creations that live in your surroundings. Whether it's your cozy home, a vibrant office or a grand public space - we believe art should belong everywhere.</p>
-        </div>
+
+      {/* Right section */}
+      <div className="max-w-xl">
+        <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+          At Artiq, we don't just make art - we shape emotions, stories and dreams into soulful creations that live in your surroundings. Whether it's your cozy home, a vibrant office or a grand public space - we believe art should belong everywhere.
+        </p>
       </div>
+
     </div>
-  )
+  );
 }
+

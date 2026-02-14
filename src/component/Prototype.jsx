@@ -57,7 +57,7 @@ export default function AnimatedIntro() {
       <AnimatePresence>
         {showSignature && (
           <motion.div
-            className="w-full h-screen bg-white fixed top-0 left-0 flex items-center justify-center z-[9999]"
+            className="w-full h-screen bg-white fixed top-10 left-0 flex items-center justify-center z-[9999]"
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
@@ -77,7 +77,7 @@ export default function AnimatedIntro() {
       </AnimatePresence>
 
       {!showSignature && (
-        <div className="w-full min-h-screen bg-white flex flex-col items-center justify-start overflow-hidden pt-10">
+        <div className="w-full bg-white flex flex-col items-center justify-start overflow-hidden pt-10">
          
           <img
             src={popup}
@@ -89,7 +89,8 @@ export default function AnimatedIntro() {
           
           <div
             ref={scrollRef}
-            className="flex gap-6 overflow-x-auto w-full h-auto px-10  mt-20 scrollbar-hide"
+           className="flex gap-6 overflow-x-auto w-full h-auto px-6 md:px-10 mt-20 md:mt-24 py-20 lg:mt-32 scrollbar-hide"
+
           >
             {prototypes.map((src, index) => (
               <ZoomImage key={index} src={src} index={index}  />
@@ -110,8 +111,15 @@ function ZoomImage({ src, index }) {
       ref={ref}
       src={src}
       alt={`Prototype ${index + 1}`}
-      className=" w-100 h-100 object-cover shadow-lg flex-shrink-0 transition hover:scale-105 duration-300 px-6 py-3 rounded-[40px]"
-
+      className="
+w-[290px] h-[260px]
+sm:w-[250px] sm:h-[250px]
+md:w-[320px] md:h-[310px]
+lg:w-[340px] lg:h-[340px]
+object-cover shadow-lg flex-shrink-0
+transition hover:scale-105 duration-300
+rounded-[30px]
+"
       draggable={false}
       initial={{ scale: 0.8, opacity: 0 }}
       animate={isInView ? { scale: 1, opacity: 1 } : {}}
