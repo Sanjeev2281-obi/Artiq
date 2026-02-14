@@ -5,6 +5,7 @@ function Nav() {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+ const closeMenu = () => setOpen(false);
 
   const handleScroll = (sectionId) => {
     setOpen(false);
@@ -40,33 +41,33 @@ function Nav() {
             <i className="fa-solid fa-xmark text-black"></i>
           </div>
 
-          <NavLink to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="font-[outfit] text-black text-left">Home</NavLink>
+          <NavLink to="/" onClick={() => { closeMenu(); window.scrollTo({ top: 0, behavior: "smooth" }); }} className="font-[outfit] text-black text-left">Home</NavLink>
 
           <button
-            onClick={() => handleScroll("about-us")}
+            onClick={() => { closeMenu(); handleScroll("about-us"); }} 
            className="font-[outfit] text-black text-left"
           >
             About Us
           </button>
 
           <button
-            onClick={() => handleScroll("services")}
+            onClick={() => { closeMenu(); handleScroll("services"); }}
             className="font-[outfit] text-black text-left"
           >
             Services
           </button>
 
           <button
-            onClick={() => handleScroll("faq")}
+            onClick={() => { closeMenu(); handleScroll("faq"); }}
            className="font-[outfit] text-black text-left"
           >
             FAQ
           </button>
-           <NavLink to="/Workshop"  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="font-[outfit] text-black text-left">
+           <NavLink to="/Workshop"  onClick={() =>  {closeMenu();window.scrollTo({ top: 0, behavior: "smooth" });}} className="font-[outfit] text-black text-left">
             Workshop
           </NavLink>
           <button
-            onClick={() => handleScroll("footer")}
+            onClick={() => { closeMenu(); handleScroll("footer"); }}
              className="font-[outfit] text-black text-left"
           >
             Contact

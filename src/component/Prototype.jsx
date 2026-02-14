@@ -57,7 +57,7 @@ export default function AnimatedIntro() {
       <AnimatePresence>
         {showSignature && (
           <motion.div
-            className="w-full h-screen bg-white fixed top-10 left-0 flex items-center justify-center z-[9999]"
+            className="w-full h-screen bg-white fixed top-0 left-0 flex items-center justify-center z-[9999]"
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
@@ -112,8 +112,8 @@ function ZoomImage({ src, index }) {
       src={src}
       alt={`Prototype ${index + 1}`}
       className="
-w-[290px] h-[260px]
-sm:w-[250px] sm:h-[250px]
+w-[290px] h-[300px]
+sm:w-[250px] sm:h-[290px]
 md:w-[320px] md:h-[310px]
 lg:w-[340px] lg:h-[340px]
 object-cover shadow-lg flex-shrink-0
