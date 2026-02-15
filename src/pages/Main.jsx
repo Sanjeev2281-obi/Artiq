@@ -9,7 +9,7 @@ import Footer from '../component/Footer'
 import Second from '../component/second'
 import About2 from '../component/About2'
 import FAQ from '../component/FAQ'
-
+import Floatingchatbot from '../component/Flotingchatbot';
 function Main() {
   const location = useLocation();
 
@@ -54,6 +54,7 @@ function Main() {
           </section>
 
         </div>
+        <Floatingchatbot />
       </div>
 
       {/* Footer */}

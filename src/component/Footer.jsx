@@ -13,11 +13,9 @@ export default function Footer() {
       </div>
     );
   }
-
   return (
-    <div id="footer" className="bg-black text-white py-16 px-8 mt-[50px] rounded-[60px] ">
+    <div id="footer" className="bg-black text-white py-16 px-8 mt-[50px] rounded-t-[60px] ">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center ">
-      
         <div>
           <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
           <p className="mb-4 text-gray-300">

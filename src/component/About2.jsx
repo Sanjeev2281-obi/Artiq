@@ -45,8 +45,6 @@ export default function PremiumSections() {
           </p>
         </div>
       </motion.div>
-
-      {/* Collaborations */}
       <motion.div
         className="flex flex-col md:flex-row items-start md:items-center gap-8"
         initial="hidden"
