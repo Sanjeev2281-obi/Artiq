@@ -16,9 +16,12 @@ export default function ArtiqBot() {
 
   // STEP 2: Submit form
   const submitForm = async () => {
-    if (!data.name || !data.phone) return;
+    if (!data.name || data.phone.length !== 10) {
+    alert("Please enter a valid 10-digit mobile number");
+    return;
+  }
 
-    await fetch("YOUR_GOOGLE_SCRIPT_URL", {
+    await fetch("https://script.google.com/macros/s/AKfycbzs3Cwip0iyVIQGcmJi_clUht5h_Os9FPJfTWmfGOMKScgHIUa5bqsJXCH4Ry5H_MOs/exec", {
       method: "POST",
       body: JSON.stringify(data),
     });
@@ -65,10 +68,19 @@ export default function ArtiqBot() {
           />
 
           <input
-            placeholder="Mobile Number"
-            className="w-full border rounded-lg p-2"
-            onChange={e => setData({ ...data, phone: e.target.value })}
-          />
+  type="tel"
+  placeholder="Mobile Number"
+  className="w-full border rounded-lg p-2"
+  value={data.phone}
+  maxLength={10}
+  onChange={(e) => {
+    const value = e.target.value.replace(/\D/g, ""); // digits only
+    if (value.length <= 10) {
+      setData({ ...data, phone: value });
+    }
+  }}
+/>
+
 
           <button
             onClick={submitForm}
