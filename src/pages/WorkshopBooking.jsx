@@ -17,7 +17,7 @@ const entry_address_id = "entry.1377402859";
 const RAZORPAY_KEY = "rzp_test_XXXXXXXXXXXXXXXX"; // Replace with your test key
 
 const WorkshopBooking = () => {
-  const [showForm, setShowForm] = useState(false);
+  const [showForm, setShowForm] = useState();
   const [form, setForm] = useState({ name: "", email: "", phone: "", address: "" });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -125,7 +125,7 @@ const WorkshopBooking = () => {
                   <div
                     className={`w-full md:w-[45%] p-8 rounded-2xl shadow-lg bg-${card.bg} text-${card.text} hover:scale-105 hover:transition-transform duration-400`}
                   >
-                    <h2 className="text-3xl font-bold mb-3">{card.title}</h2>
+                    <h2 className="text-3xl font-bold mb-3 leading-tight">{card.title}</h2>
                     <p className="text-[16px] text-gray-600">{card.content}</p>
                   </div>
                   <img
@@ -145,7 +145,7 @@ const WorkshopBooking = () => {
                   <div
                     className={`w-full md:w-[45%] p-8 rounded-2xl shadow-xl bg-${card.bg} text-${card.text}`}
                   >
-                    <h2 className="text-3xl font-bold mb-3">{card.title}</h2>
+                    <h2 className="text-3xl font-bold mb-3 leading-tight">{card.title}</h2>
                     <p className="text-[16px] text-gray-300">{card.content}</p>
                   </div>
                 </>
@@ -188,13 +188,18 @@ const WorkshopBooking = () => {
                     Every step of your learning ends with recognition — certificates are awarded for all workshops and capstone programs.
                   </p>
                   <div className="mt-6">
-                    <Button
-                      onClick={() => setShowForm(true)}
-                      className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-900"
-                    >
-                      <span>Book Workshop</span>
-                      <ArrowRightIcon className="h-4 w-4" />
-                    </Button>
+                    <a
+  href="https://docs.google.com/forms/d/1hpMaftAXmNKewk6cv1ke-YV4r-GOxIGs2vrcZXTxsKM/viewform"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-900"
+  >
+    <span>Book Workshop</span>
+    <ArrowRightIcon className="h-4 w-4" />
+  </Button>
+</a>
                   </div>
                 </div>
               </div>
@@ -213,13 +218,14 @@ const WorkshopBooking = () => {
                     <h2 className="text-2xl font-semibold text-gray-800">
                       Workshop Booking
                     </h2>
-                    <button
+                    <a href="https://docs.google.com/forms/d/1hpMaftAXmNKewk6cv1ke-YV4r-GOxIGs2vrcZXTxsKM/viewform?usp=header"><button
                       type="button"
-                      onClick={() => setShowForm(false)}
+                      //onClick={() => setShowForm(true)}
                       className="text-gray-500 hover:text-gray-800 text-xl"
                     >
                       ✕
                     </button>
+                    </a>
                   </div>
 
                   {/* Name */}

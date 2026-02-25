@@ -24,7 +24,7 @@ export default function PremiumSections() {
         custom={0}
       >
         <div className="relative">
-          <span className="absolute left-[-15px] top-0 h-full w-[3px] bg-linear-to-b from-gray-500 to-transparent rounded-full"></span>
+          <span className="absolute -left-3.75 top-0 h-full w-0.75 bg-linear-to-b from-gray-500 to-transparent rounded-full"></span>
           <h2 className="text-5xl font-bold text-gray-400">Workshop</h2>
         </div>
         <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl shadow-lg max-w-2xl">
@@ -54,7 +54,7 @@ export default function PremiumSections() {
         custom={0.2}
       >
         <div className="relative">
-          <span className="absolute left-[-15px] top-0 h-full w-[3px] bg-linear-to-b from-gray-500 to-transparent rounded-full"></span>
+          <span className="absolute -left-3.75 top-0 h-full w-0.75 bg-linear-to-b from-gray-500 to-transparent rounded-full"></span>
           <h2 className="text-5xl font-bold text-gray-400">Collaborations</h2>
         </div>
         <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl shadow-lg max-w-2xl">
@@ -91,7 +91,7 @@ export default function PremiumSections() {
           </p>
         </div>
         <div className="relative">
-          <span className="absolute left-[-15px] top-0 h-full w-[3px] bg-linear-to-b from-gray-500 to-transparent rounded-full"></span>
+          <span className="absolute -left-3.75 top-0 h-full w-0.75 bg-linear-to-b from-gray-500 to-transparent rounded-full"></span>
           <h2 className="text-5xl font-bold text-gray-400">Artist</h2>
         </div>
       </motion.div>
@@ -106,7 +106,7 @@ export default function PremiumSections() {
         custom={0.6}
       >
         <div className="relative">
-          <span className="absolute left-[-15px] top-0 h-full w-[3px] bg-linear-to-b from-gray-500 to-transparent rounded-full"></span>
+          <span className="absolute -left-3.75 top-0 h-full w-0.75 bg-linear-to-b from-gray-500 to-transparent rounded-full"></span>
           <h2 className="text-5xl font-bold text-gray-400">Disclaimer</h2>
         </div>
         <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl shadow-lg max-w-2xl">

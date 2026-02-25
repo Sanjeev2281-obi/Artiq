@@ -15,10 +15,10 @@ function About() {
 
   return (
     <div id="about-us" className="flex flex-col md:flex-row justify-between mt-7 ">
-      <div className="mt-10 mb-5 md:w-[600px] text-5xl font-bold text-gray-400 ml-4">
+      <div className="mt-10 mb-5 md:w-150 text-5xl font-bold text-gray-400 ml-4">
         About Us
       </div>
-      <div className="mt-5   text-gray-600 sm:mt-[5px] shadow-lg ">
+      <div className="mt-5   text-gray-600 sm:mt-1.25 shadow-lg ">
         <div className="mx-5">
           <p className="my-2">Rooted in tradition, inspired by culture — our creations are expressions of artistic legacy.</p>
           <p className="my-3 text-xl font-semibold">Want to shape your own idea?</p>

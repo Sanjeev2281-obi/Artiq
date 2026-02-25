@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useLocation } from "react-router-dom";
-
+import Popup from '../component/popup'; 
 import Hero from '../component/Hero'
 import About from '../component/About'
 import Serives from '../component/Serives'
@@ -59,6 +59,7 @@ function Main() {
       </div>
  
       {/* Footer */}
+     <Popup/>
       <footer id="footer">
         <Footer />
       </footer>
