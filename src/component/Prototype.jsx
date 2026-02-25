@@ -114,9 +114,9 @@ function ZoomImage({ src, index }) {
       className="
 w-72.5 h-75
 sm:w-62.5 sm:h-72.5
-md:w-[320px] md:h-[310px]
-lg:w-[340px] lg:h-[340px]
-object-cover shadow-lg flex-shrink-0
+md:w-[320px] md:h-77.5
+lg:w-85 lg:h-85
+object-cover shadow-lg shrink-0
 transition hover:scale-105 duration-300
 rounded-[30px]
 "

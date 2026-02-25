@@ -31,7 +31,7 @@ function Nav() {
       </div>
 
       {open && (
-        <div className="absolute top-3 right-4 bg-white shadow-lg rounded-lg p-5 z-50 flex flex-col gap-4 min-w-[170px] pt-8 navbar">
+        <div className="absolute top-3 right-4 bg-white shadow-lg rounded-lg p-5 z-50 flex flex-col gap-4 min-w-42.5 pt-8 navbar">
 
           {/* Close */}
           <div
