@@ -147,8 +147,8 @@ const Workspace = () => {
           </motion.div>
         </motion.div>
       </motion.div>
-
-      <Footer />
+      <div className="font-[outfit]"><Footer /></div>
+      
     </>
   );
 };
