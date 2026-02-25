@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
-
+import Workspace from "../pages/Workspace";
 function Nav() {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
@@ -65,6 +65,9 @@ function Nav() {
           </button>
            <NavLink to="/Workshop"  onClick={() =>  {closeMenu();window.scrollTo({ top: 0, behavior: "smooth" });}} className="font-[outfit] text-black text-left">
             Workshop
+          </NavLink>
+           <NavLink to="/Workspace"  onClick={() =>  {closeMenu();window.scrollTo({ top: 0, behavior: "smooth" });}} className="font-[outfit] text-black text-left">
+            Workspace
           </NavLink>
           <button
             onClick={() => { closeMenu(); handleScroll("footer"); }}

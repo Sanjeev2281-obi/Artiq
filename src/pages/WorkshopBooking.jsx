@@ -5,7 +5,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import main from '../assets/main.png';
 import { motion } from "framer-motion";
 import Footer from "../component/Footer.jsx";
-
+import popup from '../assets/popup.png';
 const GOOGLE_FORM_ACTION_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLScasBBDQWsrM2Dk1y1-hpNg_Jv670v7S_t0PYVP9lMZFZwbIw/formResponse";
 
@@ -98,7 +98,12 @@ const WorkshopBooking = () => {
   return (
     <div className=" font-[Outfit]">
       <div className="mt-24 px-4 md:px-20 font-[Outfit]">
-        <img className="top-4 left-4 w-24 h-auto z-100 fixed" src={main} />
+        <img
+                   src={popup}
+                   alt="Main Top"
+                   className="fixed top-2 left-2 w-26 h-25 rounded-full  z-50"
+                   draggable={false}
+                 />
 
         <p className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-8">
           Workshop

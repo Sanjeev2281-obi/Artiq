@@ -60,7 +60,7 @@ const FAQ = () => {
                     >
                         {/* Question */}
                         <div
-                            className="flex justify-between items-center cursor-pointer  py-[20px]"
+                            className="flex justify-between items-center cursor-pointer  py-5"
                             onClick={() => toggleFAQ(index)}
                         >
                             <h3 className="font-semibold text-gray-700 mt-2">

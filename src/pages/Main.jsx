@@ -10,6 +10,7 @@ import Second from '../component/second'
 import About2 from '../component/About2'
 import FAQ from '../component/FAQ'
 import Floatingchatbot from '../component/Flotingchatbot';
+import Workspace from './Workspace';
 function Main() {
   const location = useLocation();
 
@@ -52,11 +53,11 @@ function Main() {
           <section id="faq" className="py-20 border-b border-gray-200">
             <FAQ />
           </section>
-
+         
         </div>
         <Floatingchatbot />
       </div>
-
+ 
       {/* Footer */}
       <footer id="footer">
         <Footer />
