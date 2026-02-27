@@ -5,7 +5,7 @@ import WorkshopBooking from '../pages/WorkshopBooking';
 export default function Popup() {
   return (
     
-    <NavLink to="/Workshop"><a
+    <a href='https://docs.google.com/forms/d/1hpMaftAXmNKewk6cv1ke-YV4r-GOxIGs2vrcZXTxsKM/viewform?usp=header'
   className="
     fixed bottom-6 left-6 z-50
     flex items-center gap-2
@@ -20,6 +20,6 @@ export default function Popup() {
 >
   <span className="font-medium">Book Workshop</span>
   <ArrowRightIcon className="h-4 w-4" />
-</a></NavLink>
+</a>
   )
 }
