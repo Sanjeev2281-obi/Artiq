@@ -70,31 +70,7 @@ export default function PremiumSections() {
       </motion.div>
 
       {/* Artist */}
-      <motion.div
-        className="flex flex-col-reverse md:flex-row items-start md:items-center gap-8"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-        custom={0.4}
-      >
-        <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl shadow-lg max-w-2xl">
-          <p className="text-gray-700 my-2">
-            Born into a family of artists and artisans, I've been practicing art
-            since childhood. With over 20 years of experience, my journey is
-            deeply rooted in tradition and evolved through exploration.
-          </p>
-          <p className="text-gray-700 my-2">
-            We are more than just a studio – a community of creators,
-            collaborators, and dreamers who believe that art is for everyone,
-            everywhere.
-          </p>
-        </div>
-        <div className="relative">
-          <span className="absolute -left-3.75 top-0 h-full w-0.75 bg-linear-to-b from-gray-500 to-transparent rounded-full"></span>
-          <h2 className="text-5xl font-bold text-gray-400">Artist</h2>
-        </div>
-      </motion.div>
+     
 
       {/* Disclaimer */}
       <motion.div

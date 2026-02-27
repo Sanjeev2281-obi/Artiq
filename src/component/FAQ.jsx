@@ -4,34 +4,47 @@ import { useState } from "react";
 
 const faqData = [
     {
-        question: "How long will it take to complete a project?",
+        question: "How long does a project or custom artwork take?",
         answer:
-            "Project timelines depend on the size and complexity. Small projects usually take 3–5 days, while larger projects may take 1–2 weeks."
+            "Timelines vary based on complexity; we’ll provide an estimated completion time once we understand your needs."
     },
     {
-        question: "How much do you charge, and is it inclusive of materials?",
+        question: "How much do you charge for murals or sculptures?",
         answer:
-            "Our pricing starts at ₹150 per sq. ft. Prices may vary depending on the design. This includes materials, artist wages, and travel expenses."
+            "Our pricing depends on the size, design complexity, materials used, finishing requirements, and project location. Each artwork is custom-designed, so we provide a detailed quotation after understanding your specific requirements."
     },
     {
-        question: "How many artists will work on a project?",
+        question: "What materials do you provide for workshops, and what do I need to bring?",
         answer:
-            "The number of artists depends on the project size. Usually 1–3 artists are assigned."
+            "We provide all core materials for workshops; any special requests can be discussed in advance."
     },
     {
-        question: "How long will it take to complete a project?",
+        question: "Can I commission a custom artwork?",
         answer:
-            "Project timelines depend on the size and complexity. Small projects usually take 3–5 days, while larger projects may take 1–2 weeks."
+            "Absolutely! We specialize in custom pieces—reach out to discuss your vision, and we’ll create something unique."
     },
     {
-        question: "How long will it take to complete a project?",
+        question: "How do I sign up for a workshop or class?",
         answer:
-            "Project timelines depend on the size and complexity. Small projects usually take 3–5 days, while larger projects may take 1–2 weeks."
+            "You can register directly on our website or contact us via email or phone for assistance."
     },
     {
-        question: "How long will it take to complete a project?",
+        question: "What age groups are your workshops suitable for?",
         answer:
-            "Project timelines depend on the size and complexity. Small projects usually take 3–5 days, while larger projects may take 1–2 weeks."
+            "We offer sessions for both children and adults—check the schedule for specific timings."
+
+    },
+    {
+        question: "Do you offer private sessions or group bookings?",
+        answer:
+            "We offer sessions for both children and adults—check the schedule for specific timings."
+
+    },
+    {
+        question: "What age groups are your workshops suitable for?",
+        answer:
+            "Yes, we offer private sessions and group bookings—please contact us to tailor the experience to your needs."
+
     },
 ];
 const FAQ = () => {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import p8 from "../assets/workshop.jpeg"; // optional local image
+import p8 from "../assets/work.jpg"; // optional local image
 import { Button } from "rizzui";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import main from '../assets/main.png';
@@ -166,7 +166,7 @@ const WorkshopBooking = () => {
               <img
                 src={p8} // Replace with your card image
                 alt="Workshop"
-                className="hidden md:block md:w-1/2 h-auto object-cover"
+                className="w-full md:w-1/2 h-auto object-cover"
               />
 
               {/* Right Content */}

@@ -6,7 +6,7 @@ export default function Second() {
       
       {/* Left section */}
       <div className="max-w-md">
-        <p className="font-bold text-2xl md:text-3xl">ARTIQ</p>
+        <p className="font-bold text-2xl text-gray-600 md:text-3xl">ARTIQ</p>
 
         <p className="text-sm md:text-base text-gray-600">
           Art studio

@@ -70,7 +70,8 @@ const Workspace = () => {
             </p>
 
             <h2 className="text-4xl md:text-5xl font-semibold leading-tight">
-              A Space Designed for Creativity
+             Art Studio and Creative Community
+
             </h2>
 
             <p className="text-gray-600 leading-relaxed">
@@ -119,6 +120,10 @@ const Workspace = () => {
             <p className="text-gray-600 leading-relaxed">
               This space encourages collaboration, conversation, and meaningful
               connections that extend beyond the canvas.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              
+Whether you’re looking to book the studio space or collaborate, we’d love to hear from you.
             </p>
           </motion.div>
 
