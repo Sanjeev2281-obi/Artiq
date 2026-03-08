@@ -22,6 +22,7 @@ function Main() {
   }, [location]);
 
   return (
+    
     <div className="font-[Outfit] w-full overflow-x-hidden">
 
       <Prototype />
@@ -64,6 +65,7 @@ function Main() {
       </footer>
 
     </div>
+    
   )
 }
 

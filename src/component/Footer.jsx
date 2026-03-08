@@ -14,7 +14,7 @@ export default function Footer() {
     );
   }
   return (
-    <div id="footer" className="bg-black text-white py-16 px-8 mt-[50px] rounded-t-[60px] ">
+    <div id="footer" className="bg-[#212121] text-white py-20 px-8 mt-12.5 rounded-t-[60px] md:mx-20 md:rounded-[60px] lg:b-4 lg:mx-20">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center ">
         <div>
           <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
@@ -91,6 +91,15 @@ export default function Footer() {
             >
               {state.submitting ? "Sending..." : "Send Message"}
             </button>
+            <div className="absolute left-1/2 transform -translate-x-1/2 mt-8">
+              <p className="text-xs text-gray-400  text-center leading-relaxed">
+  © 2025 Artiqora. All rights reserved. <br className="sm:hidden" />
+  <span className="mx-1 hidden sm:inline">|</span>
+  Privacy Policy
+  <span className="mx-1">|</span>
+  Terms of Use
+</p>
+            </div>
           </form>
         </div>
       </div>

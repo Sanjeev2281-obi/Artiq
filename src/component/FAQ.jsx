@@ -81,7 +81,7 @@ const FAQ = () => {
                 className="w-full flex justify-between items-start gap-6 py-6 text-left cursor-pointer group bg-transparent border-none"
               >
                 <div className="flex items-start gap-4">
-                  <span className="text-sm text-gray-300 font-light mt-0.5 flex-shrink-0 w-6">
+                  <span className="text-sm text-gray-300 font-light mt-0.5 shrink-0 w-6">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="text-base md:text-lg font-medium text-gray-800 leading-snug group-hover:text-gray-500 transition-colors duration-300">
@@ -93,7 +93,7 @@ const FAQ = () => {
                 <motion.span
                   animate={{ rotate: activeIndex === index ? 45 : 0 }}
                   transition={{ duration: 0.35, ease: "easeInOut" }}
-                  className="mt-1 flex-shrink-0"
+                  className="mt-1 shrink-0"
                 >
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <line x1="8" y1="0" x2="8" y2="16" stroke="#374151" strokeWidth="1.5" />
