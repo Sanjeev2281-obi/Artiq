@@ -58,8 +58,7 @@ function Main() {
         <Floatingchatbot />
       </div>
  
-      {/* Footer */}
-     <Popup/>
+      
       <footer id="footer">
         <Footer />
       </footer>
