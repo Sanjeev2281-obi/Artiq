@@ -69,6 +69,9 @@ function Nav() {
            <NavLink to="/Workspace"  onClick={() =>  {closeMenu();window.scrollTo({ top: 0, behavior: "smooth" });}} className="font-[outfit] text-black text-left">
             Workspace
           </NavLink>
+           <NavLink to="/Events"  onClick={() =>  {closeMenu();window.scrollTo({ top: 0, behavior: "smooth" });}} className="font-[outfit] text-black text-left">
+            Events
+          </NavLink>
           <button
             onClick={() => { closeMenu(); handleScroll("footer"); }}
              className="font-[outfit] text-black text-left"

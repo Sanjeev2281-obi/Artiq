@@ -4,6 +4,7 @@ import Nav from './component/Nav'
 import Home from './pages/Main'
 import WorkshopBooking from './pages/WorkshopBooking'
 import Workspace from './pages/Workspace'
+import Events from './pages/Events'
 function App() {
   return (
     <BrowserRouter>
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/Workshop" element={<WorkshopBooking />}/>
         <Route path="/Workspace" element={<Workspace />}/>
+        <Route path="/Events" element={<Events />}/>
       </Routes>
      
     </BrowserRouter>
