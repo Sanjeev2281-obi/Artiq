@@ -80,10 +80,8 @@ const FAQ = () => {
                 onClick={() => toggleFAQ(index)}
                 className="w-full flex justify-between items-start gap-6 py-6 text-left cursor-pointer group bg-transparent border-none"
               >
-                <div className="flex items-start gap-4">
-                  <span className="text-sm text-gray-300 font-light mt-0.5 shrink-0 w-6">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
+                <div className="flex items-start ">
+                  
                   <span className="text-base md:text-lg font-medium text-gray-800 leading-snug group-hover:text-gray-500 transition-colors duration-300">
                     {item.question}
                   </span>

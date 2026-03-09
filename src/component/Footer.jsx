@@ -1,5 +1,4 @@
 import React from "react";
-
 import { useForm, ValidationError } from "@formspree/react";
 import { FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa";
 export default function Footer() {
@@ -103,7 +102,6 @@ export default function Footer() {
           </form>
         </div>
       </div>
-
     </div>
   );
 }
