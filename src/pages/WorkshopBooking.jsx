@@ -85,7 +85,7 @@ const WorkshopBooking = () => {
       image: "https://m.media-amazon.com/images/I/61hV8lwDOsL.jpg",
     },
     {
-      side: "right",
+side: "right",
       bg: "black",
       text: "white",
       title: "Sculpted Dreams",
@@ -191,18 +191,14 @@ const WorkshopBooking = () => {
                     Every step of your learning ends with recognition — certificates are awarded for all workshops and capstone programs.
                   </p>
                   <div className="mt-6">
-                    <a
-  href="https://docs.google.com/forms/d/1hpMaftAXmNKewk6cv1ke-YV4r-GOxIGs2vrcZXTxsKM/viewform"
-  target="_blank"
-  rel="noopener noreferrer"
->
+                   
   <Button
     className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-900"
   >
     <span>Book Workshop</span>
     <ArrowRightIcon className="h-4 w-4" />
   </Button>
-</a>
+
                   </div>
                 </div>
               </div>

@@ -23,7 +23,7 @@ export default function EventsTitle() {
         }
       `}</style>
 
-      <div className="inline-flex flex-col items-start mt-27">
+      <div className="inline-flex flex-col items-start mt-27 px-4">
          <img
                            src={popup}
                            alt="Main Top"

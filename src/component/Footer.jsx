@@ -14,7 +14,7 @@ export default function Footer() {
     );
   }
   return (
-    <div id="footer" className="bg-[#212121] text-white py-20 px-8 mt-12.5 rounded-t-[60px] md:mx-20 md:rounded-[60px] lg:b-4 lg:mx-20">
+    <div id="footer" className="bg-[#212121] text-white py-20 px-8 mt-12.5    ">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center ">
         <div>
           <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
