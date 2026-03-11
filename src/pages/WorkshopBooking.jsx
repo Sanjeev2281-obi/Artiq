@@ -108,9 +108,22 @@ side: "right",
                  />
                  </NavLink>
 
-        <p className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-8">
-          Workshop
-        </p>
+        <motion.div
+  className="flex flex-col items-center mb-8"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+>
+  <p className="text-4xl md:text-5xl font-bold text-center text-gray-900">
+    Workshop
+  </p>
+  <motion.div
+    className="h-[1.6px] bg-black rounded-full mt-3"
+    initial={{ width: 0 }}
+    animate={{ width: "100px" }}
+    transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
+  />
+</motion.div>
 
         {/* Zig-Zag Cards */}
         <div className="space-y-20">
@@ -158,7 +171,23 @@ side: "right",
         </div>
 
         {/* Workshop Booking Form */}
-        <p className="font-bold text-4xl mt-15 ml-1">Workshop Booking</p>
+        {/* <p className="font-bold text-4xl mt-15 ml-1">Workshop Booking</p> */}
+        <motion.div
+  className="flex flex-col mt-15 ml-1 mb-2"
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.5 }}
+  transition={{ duration: 0.6 }}
+>
+  <p className="font-bold text-4xl">Workshop Booking</p>
+  <motion.div
+    className="h-[1.5px] bg-black rounded-full mt-3"
+    initial={{ width: 0 }}
+    whileInView={{ width: "160px" }}
+    viewport={{ once: true, amount: 0.5 }}
+    transition={{ duration: 0.7, delay: 0.35, ease: "easeOut" }}
+  />
+</motion.div>
 
 
         <div className="mt-16 flex justify-center px-4 md:px-0">
