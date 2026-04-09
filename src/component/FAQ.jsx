@@ -28,12 +28,12 @@ const faqData = [
   },
   {
     question: "Do you offer private sessions or group bookings?",
-    answer: "We offer sessions for both children and adults—check the schedule for specific timings."
+    answer: "Yes, we offer private sessions and group bookings—please contact us to tailor the experience to your needs."
   },
   {
     question: "What age groups are your workshops suitable for?",
-    answer: "Yes, we offer private sessions and group bookings—please contact us to tailor the experience to your needs."
-  },
+    answer: "We offer sessions for both children and adults—check the schedule for specific timings."
+  }
 ];
 
 const FAQ = () => {
