@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Footer from "../component/Footer.jsx";
 import popup from '../assets/popup.png';
 import { NavLink } from "react-router-dom";
+import potteryVideo from '../assets/pottery_workshop.MOV'; // optional local video
 const GOOGLE_FORM_ACTION_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLScasBBDQWsrM2Dk1y1-hpNg_Jv670v7S_t0PYVP9lMZFZwbIw/formResponse";
 
@@ -349,7 +350,69 @@ side: "right",
           )}
         </div>
       </div>
-      <Footer />
+      {/* Pottery Workshop Video Section */}
+{/* Pottery Workshop Video Section (UPGRADED) */}
+<div className="w-full mt-10 mb-24 flex flex-col items-center text-center px-4">
+
+  <motion.h2
+    className="text-3xl md:text-5xl font-bold mb-3"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+  >
+    Pottery Workshop Experience
+  </motion.h2>
+
+  <p className="text-gray-600 max-w-2xl mb-8">
+    Watch real artisans shape clay into beautiful pottery pieces.
+    A calm, creative, hands-on learning experience.
+  </p>
+
+  {/* VIDEO WRAPPER */}
+  <motion.div
+    className="relative w-full md:w-[80%] lg:w-[70%] rounded-2xl overflow-hidden shadow-2xl group"
+    initial={{ opacity: 0, scale: 0.95 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+  >
+
+    <video
+      src={potteryVideo}
+      autoPlay
+      muted
+      loop
+      playsInline
+      className="
+        w-full 
+       h-[400px] md:h-[420px] lg:h-[450px] xl:h-[580px]
+        object-cover
+        group-hover:scale-105 transition-transform duration-700
+      "
+    />
+
+    {/* GLASS OVERLAY */}
+    <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px] flex flex-col justify-end p-6">
+
+      <div className="text-white text-left">
+        <h3 className="text-xl md:text-3xl font-semibold">
+          Live Pottery Creation
+        </h3>
+        <p className="text-sm md:text-base opacity-90 mt-1">
+          From raw clay → handcrafted art
+        </p>
+
+        {/* CTA */}
+        <button className="mt-4 px-5 py-2 bg-white text-black rounded-xl font-medium hover:bg-gray-200 transition">
+          Join Workshop Now
+        </button>
+      </div>
+
+    </div>
+
+  </motion.div>
+</div>
+  <Footer />
     </div>
   );
 };
