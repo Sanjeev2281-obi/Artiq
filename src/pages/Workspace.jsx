@@ -1,3 +1,206 @@
+// import React from "react";
+// import studioImg1 from "../assets/s1.jpg";
+// import studioImg2 from "../assets/s2.jpg";
+// import popup from "../assets/popup.png";
+// import Footer from "../component/Footer";
+// import { motion } from "framer-motion";
+
+// const fadeUp = (delay = 0) => ({
+//   initial: { opacity: 0, y: 40 },
+//   animate: { opacity: 1, y: 0 },
+//   transition: { duration: 1, ease: [0.22, 1, 0.36, 1], delay },
+// });
+
+// const fadeUpView = (delay = 0) => ({
+//   initial: { opacity: 0, y: 40 },
+//   whileInView: { opacity: 1, y: 0 },
+//   viewport: { once: true, amount: 0.2 },
+//   transition: { duration: 1, ease: [0.22, 1, 0.36, 1], delay },
+// });
+
+// const Workspace = () => {
+//   return (
+//     <>
+//       <div className="min-h-screen bg-white font-[Outfit]">
+//         {/* Floating logo */}
+//         <img
+//           src={popup}
+//           alt="Decoration"
+//           className="fixed top-2 left-2 w-20 h-20 rounded-full z-50"
+//           draggable={false}
+//         />
+
+//         {/* ── HERO LABEL ── */}
+//         <motion.div
+//           {...fadeUp(0)}
+//           className="pt-36 px-6 md:px-20 lg:px-32"
+//         >
+//           <p className="text-[11px] uppercase tracking-[0.3em] text-black/40 mb-3">
+//             The Studio
+//           </p>
+//           <div className="w-full h-px bg-black/10 mb-16" />
+//         </motion.div>
+
+//         {/* ── SECTION 1 ── */}
+//         <section className="px-6 md:px-20 lg:px-32 mb-40">
+//           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6 md:gap-16 items-end">
+
+//             {/* Image */}
+//             <motion.div
+//               initial={{ opacity: 0, scale: 0.96 }}
+//               animate={{ opacity: 1, scale: 1 }}
+//               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+//               className="relative overflow-hidden rounded-2xl"
+//             >
+//               <img
+//                 src={studioImg1}
+//                 alt="ARTIQ Studio"
+//                 className="w-full aspect-[4/5] object-cover transition-all duration-700"
+//                 draggable={false}
+//               />
+//               {/* Subtle index label on image */}
+//               <span className="absolute top-5 left-5 text-[10px] tracking-[0.25em] uppercase text-white/60">
+//                 01
+//               </span>
+//             </motion.div>
+
+//             {/* Text */}
+//             <div className="flex flex-col justify-end pb-2 space-y-8">
+//               <motion.h2
+//                 {...fadeUp(0.15)}
+//                 className="text-5xl md:text-6xl lg:text-7xl font-light leading-[1.08] tracking-tight text-black"
+//               >
+//                 Art Studio<br />& Creative<br />Community
+//               </motion.h2>
+
+//               <motion.div {...fadeUp(0.28)} className="w-8 h-px bg-black" />
+
+//               <motion.p
+//                 {...fadeUp(0.35)}
+//                 className="text-sm text-black/50 leading-relaxed max-w-xs"
+//               >
+//                 A calm, thoughtfully designed environment where ideas flow
+//                 freely — balancing nature, art, and functionality.
+//               </motion.p>
+
+//               <motion.p
+//                 {...fadeUp(0.42)}
+//                 className="text-sm text-black/50 leading-relaxed max-w-xs"
+//               >
+//                 Whether solo or collaborative, the space adapts to your
+//                 creative rhythm.
+//               </motion.p>
+
+//               <motion.p
+//                 {...fadeUp(0.5)}
+//                 className="text-[10px] uppercase tracking-[0.3em] text-black/25"
+//               >
+//                 Pondicherry, India
+//               </motion.p>
+//             </div>
+//           </div>
+//         </section>
+
+//         {/* ── FULL-WIDTH DIVIDER ── */}
+//         <motion.div
+//           {...fadeUpView(0)}
+//           className="px-6 md:px-20 lg:px-32 mb-40"
+//         >
+//           <div className="w-full h-px bg-black/8" />
+//         </motion.div>
+
+//         {/* ── SECTION 2 ── */}
+//         <section className="px-6 md:px-20 lg:px-32 mb-40">
+//           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6 md:gap-16 items-end">
+
+//             {/* Text — left on desktop */}
+//             <div className="flex flex-col justify-end pb-2 space-y-8 order-2 md:order-1">
+//               <motion.p
+//                 {...fadeUpView(0)}
+//                 className="text-[10px] uppercase tracking-[0.3em] text-black/30"
+//               >
+//                 Community & Events
+//               </motion.p>
+
+//               <motion.h2
+//                 {...fadeUpView(0.1)}
+//                 className="text-5xl md:text-6xl lg:text-7xl font-light leading-[1.08] tracking-tight text-black"
+//               >
+//                 Where Artists<br />Connect &<br />Collaborate
+//               </motion.h2>
+
+//               <motion.div {...fadeUpView(0.2)} className="w-8 h-px bg-black" />
+
+//               <motion.p
+//                 {...fadeUpView(0.28)}
+//                 className="text-sm text-black/50 leading-relaxed max-w-xs"
+//               >
+//                 ARTIQ is more than a studio — it's a growing creative community.
+//                 Through workshops, classes, and meet-ups, we bring artists
+//                 together to learn, share, and evolve.
+//               </motion.p>
+
+//               <motion.p
+//                 {...fadeUpView(0.35)}
+//                 className="text-sm text-black/50 leading-relaxed max-w-xs"
+//               >
+//                 This space encourages collaboration, conversation, and
+//                 meaningful connections that extend beyond the canvas.
+//               </motion.p>
+
+//               <motion.a
+//                 {...fadeUpView(0.42)}
+//                 href="mailto:hello@artiq.in"
+//                 className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-black border border-black/20 px-6 py-3 rounded-full w-fit hover:bg-black hover:text-white transition-all duration-400 group"
+//               >
+//                 Get in Touch
+//                 <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+//               </motion.a>
+//             </div>
+
+//             {/* Image — right on desktop */}
+//             <motion.div
+//               initial={{ opacity: 0, scale: 0.96 }}
+//               whileInView={{ opacity: 1, scale: 1 }}
+//               viewport={{ once: true, amount: 0.2 }}
+//               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+//               className="relative overflow-hidden rounded-2xl order-1 md:order-2"
+//             >
+//               <img
+//                 src={studioImg2}
+//                 alt="ARTIQ Community"
+//                className="w-full aspect-[4/5] object-cover object-top transition-all duration-700"
+//                 draggable={false}
+//               />
+//               <span className="absolute top-5 left-5 text-[10px] tracking-[0.25em] uppercase text-white/60">
+//                 02
+//               </span>
+//             </motion.div>
+//           </div>
+//         </section>
+
+//         {/* ── CLOSING STATEMENT ── */}
+//         <motion.section
+//           {...fadeUpView(0)}
+//           className="px-6 md:px-20 lg:px-32 mb-32 max-w-7xl mx-auto"
+//         >
+//           <div className="w-full h-px bg-black/8 mb-20" />
+//           <p className="text-3xl md:text-4xl lg:text-5xl font-light text-black/15 leading-snug tracking-tight max-w-3xl">
+//             "A space where stillness<br />meets creation."
+//           </p>
+//         </motion.section>
+//       </div>
+
+//       <div className="font-[Outfit]">
+//         <Footer />
+//       </div>
+//     </>
+//   );
+// };
+
+// export default Workspace;
+
+
 import React from "react";
 import studioImg1 from "../assets/s1.jpg";
 import studioImg2 from "../assets/s2.jpg";
