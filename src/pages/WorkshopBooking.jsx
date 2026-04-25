@@ -7,7 +7,8 @@ import { motion } from "framer-motion";
 import Footer from "../component/Footer.jsx";
 import popup from '../assets/popup.png';
 import { NavLink } from "react-router-dom";
-import potteryVideo from '../assets/pottery_workshop.MOV'; // optional local video
+// import potteryVideo from '../assets/pottery_workshop.MOV'; 
+// optional local video
 const GOOGLE_FORM_ACTION_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLScasBBDQWsrM2Dk1y1-hpNg_Jv670v7S_t0PYVP9lMZFZwbIw/formResponse";
 
@@ -378,11 +379,12 @@ side: "right",
   >
 
     <video
-      src={potteryVideo}
+       src="https://res.cloudinary.com/dqwvi8qi5/video/upload/v1777087892/pottery_workshop_yepvya.mov"
       autoPlay
       muted
       loop
       playsInline
+      
       className="
         w-full 
        h-[400px] md:h-[420px] lg:h-[450px] xl:h-[580px]
