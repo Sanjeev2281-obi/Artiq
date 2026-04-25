@@ -379,7 +379,7 @@ side: "right",
   >
 
     <video
-        src="https://res.cloudinary.com/dqwvi8qi5/video/upload/v1777091570/pottery_workshop_yepvya_d5zaqd.mp4"
+        src="https://res.cloudinary.com/dqwvi8qi5/video/upload/v1777092571/pottery_workshop_yepvya_tpfnjd.mp4"
       autoPlay
       muted
       loop
