@@ -389,6 +389,8 @@ side: "right",
         w-full 
        h-[400px] md:h-[420px] lg:h-[380px] xl:h-[530px]
         object-cover
+         object-center
+    transform-gpu
         group-hover:scale-105 transition-transform duration-700
       "
     />
