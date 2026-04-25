@@ -379,7 +379,7 @@ side: "right",
   >
 
     <video
-       src="https://res.cloudinary.com/dqwvi8qi5/video/upload/v1777087892/pottery_workshop_yepvya.mov"
+        src="https://res.cloudinary.com/dqwvi8qi5/video/upload/v1777091570/pottery_workshop_yepvya_d5zaqd.mp4"
       autoPlay
       muted
       loop
@@ -387,7 +387,7 @@ side: "right",
       
       className="
         w-full 
-       h-[400px] md:h-[420px] lg:h-[450px] xl:h-[580px]
+       h-[400px] md:h-[420px] lg:h-[380px] xl:h-[530px]
         object-cover
         group-hover:scale-105 transition-transform duration-700
       "
