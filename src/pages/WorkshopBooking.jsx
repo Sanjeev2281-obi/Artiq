@@ -17,7 +17,7 @@ const entry_email_id = "entry.1791608995";
 const entry_phone_id = "entry.844258481";
 const entry_address_id = "entry.1377402859";
 
-const RAZORPAY_KEY = "rzp_test_XXXXXXXXXXXXXXXX"; // Replace with your test key
+const RAZORPAY_KEY = "rzp_test_XXXXXXXXXXXXXXXX"; 
 
 const WorkshopBooking = () => {
   const [showForm, setShowForm] = useState();
@@ -384,10 +384,10 @@ side: "right",
       muted
       loop
       playsInline
-      
+       preload="none"
       className="
         w-full 
-       h-[400px] md:h-[420px] lg:h-[380px] xl:h-[530px]
+       h-[400px] md:h-[420px] lg:h-[340px] xl:h-[530px]
         object-cover
          object-center
     transform-gpu
