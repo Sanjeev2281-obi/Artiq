@@ -78,8 +78,6 @@ function Nav() {
           >
             Contact
           </button>
-
-         
         </div>
       )}
     </div>

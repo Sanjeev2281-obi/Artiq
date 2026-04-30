@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import Footer from "../component/Footer.jsx";
 import popup from '../assets/popup.png';
 import { NavLink } from "react-router-dom";
-// import potteryVideo from '../assets/pottery_workshop.MOV'; 
+import potteryVideo from '../assets/pottery_workshop.MOV'; 
 // optional local video
 const GOOGLE_FORM_ACTION_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLScasBBDQWsrM2Dk1y1-hpNg_Jv670v7S_t0PYVP9lMZFZwbIw/formResponse";
@@ -33,6 +33,19 @@ const WorkshopBooking = () => {
       This workshop covers painting, stenciling, and decorative wall accents.
       Perfect for beginners and enthusiasts alike.`,
   };
+  const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 40 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 1, ease: [0.22, 1, 0.36, 1], delay },
+});
+
+const fadeUpView = (delay = 0) => ({
+  initial: { opacity: 0, y: 40 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.2 },
+  transition: { duration: 1, ease: [0.22, 1, 0.36, 1], delay },
+});
+
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -379,7 +392,7 @@ side: "right",
   >
 
     <video
-        src="https://res.cloudinary.com/dqwvi8qi5/video/upload/v1777092571/pottery_workshop_yepvya_tpfnjd.mp4"
+        src={potteryVideo}//"https://res.cloudinary.com/dqwvi8qi5/video/upload/v1777092571/pottery_workshop_yepvya_tpfnjd.mp4"
       autoPlay
       muted
       loop
@@ -416,6 +429,15 @@ side: "right",
 
   </motion.div>
 </div>
+<motion.section
+          {...fadeUpView(0)}
+          className="px-6 md:px-20 lg:px-32 mb-32 max-w-7xl mx-auto"
+        >
+          <div className="w-full h-px bg-black/8 mb-20" />
+          <p className="text-3xl md:text-4xl lg:text-5xl font-light text-black/15 leading-snug tracking-tight max-w-3xl">
+            "A space where stillness<br />meets creation."
+          </p>
+        </motion.section>
   <Footer />
     </div>
   );
