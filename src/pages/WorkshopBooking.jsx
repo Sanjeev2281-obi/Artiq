@@ -444,6 +444,9 @@
 // };
 
 // export default WorkshopBooking;
+
+
+
 import React, { useState, useRef, useEffect } from "react";
 import p8 from "../assets/work.jpg";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
@@ -541,7 +544,7 @@ const WorkshopBooking = () => {
   const [success, setSuccess] = useState(false);
   const [paymentId, setPaymentId] = useState("");
   const [hoveredCard, setHoveredCard] = useState(null);
-
+ const bookingOpen = false;
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
@@ -631,19 +634,19 @@ const WorkshopBooking = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span className="text-xs uppercase tracking-[0.3em] text-black/50">Artiq Studio · 2025</span>
+          <span className="text-xs uppercase tracking-[0.3em] text-black/50">Artiq Studio </span>
         </motion.div>
 
         {/* giant heading */}
         <motion.div className="text-center relative z-10 px-4" style={{ y: heroY, opacity: heroOpacity }}>
           <div className="overflow-hidden">
             <motion.h1
-              className="text-[clamp(4.5rem,15vw,12rem)] font-light tracking-[-0.04em] text-black leading-[0.88] mb-6"
+              className="text-[clamp(1rem,7vw,6rem)] font-light tracking-[-0.04em] text-black leading-[0.88] mb-6"
               initial={{ y: 120, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
             >
-              Work<span className="italic font-extralight">shop</span>
+              Experiences<span className="italic font-extralight"></span>
             </motion.h1>
           </div>
 
@@ -662,16 +665,18 @@ const WorkshopBooking = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.7 }}
           >
-            <motion.button
-              onClick={() => setShowForm(true)}
-              className="group inline-flex items-center gap-3 text-xs uppercase tracking-[0.25em] bg-black text-white px-8 py-4 rounded-full"
-              whileHover={{ scale: 1.03, backgroundColor: "#222" }}
-              whileTap={{ scale: 0.97 }}
-              transition={{ duration: 0.3 }}
+            <a  href="tel:+916369692363">
+              <motion.button
+                
+                className="group inline-flex items-center gap-3 text-xs uppercase tracking-[0.25em] bg-black text-white px-8 py-4 rounded-full"
+                whileHover={{ scale: 1.03, backgroundColor: "#222" }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ duration: 0.3 }}
             >
               Reserve Your Spot
               <ArrowRightIcon className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform duration-300" />
             </motion.button>
+            </a>
             <button className="text-xs uppercase tracking-[0.25em] text-black/40 hover:text-black transition-colors duration-300 border-b border-black/10 pb-0.5">
               See Programs
             </button>
@@ -698,25 +703,7 @@ const WorkshopBooking = () => {
       <Marquee />
 
       {/* ══ STATS ══ */}
-      <section className="px-6 md:px-20 mb-28">
-        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10">
-          {[
-            { value: 200, label: "Students Trained" },
-            { value: 12, label: "Expert Instructors" },
-            { value: 8, label: "Workshop Types" },
-            { value: 98, label: "Satisfaction Rate" },
-          ].map((stat, i) => (
-            <motion.div key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.7 }}
-            >
-              <Counter value={stat.value} label={stat.label} />
-            </motion.div>
-          ))}
-        </div>
-      </section>
+      
 
       {/* ══ WORKSHOP CARDS ══ */}
       <section className="px-4 md:px-12 lg:px-20 mb-32 max-w-7xl mx-auto">
@@ -782,7 +769,7 @@ const WorkshopBooking = () => {
       </section>
 
       {/* ══ VIDEO ══ */}
-      <section className="px-4 md:px-12 mb-32 max-w-7xl mx-auto">
+     <section className="px-4 md:px-12 mb-32 max-w-7xl mx-auto">
         <motion.div
           className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6"
           initial={{ opacity: 0, y: 30 }}
@@ -820,7 +807,7 @@ const WorkshopBooking = () => {
               <h3 className="text-2xl md:text-4xl font-light tracking-tight">From raw clay → handcrafted art</h3>
             </div>
             <motion.button
-              onClick={() => setShowForm(true)}
+             
               className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-black bg-white px-6 py-3 rounded-full hover:bg-white/90 transition-colors duration-300 self-start md:self-auto whitespace-nowrap"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
@@ -828,20 +815,15 @@ const WorkshopBooking = () => {
               Join Workshop <ArrowRightIcon className="h-3.5 w-3.5" />
             </motion.button>
           </div>
-
+   
           {/* spinning badge */}
-          <motion.div
-            className="absolute top-6 right-6 w-16 h-16 rounded-full border border-white/20 flex items-center justify-center backdrop-blur-sm bg-white/10"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          >
-            <span className="text-[8px] uppercase tracking-[0.15em] text-white/70 text-center leading-tight">Live<br />Now</span>
-          </motion.div>
+          
         </motion.div>
+        
       </section>
 
       {/* ══ BOOKING ══ */}
-      <section className="px-4 md:px-12 mb-32 max-w-7xl mx-auto">
+      <section  className="relative px-4 md:px-12 mb-32 max-w-7xl mx-auto">
         <div className="w-full h-px bg-black/8 mb-20" />
         <motion.div
           className="mb-12"
@@ -872,7 +854,7 @@ const WorkshopBooking = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  <span className="text-[11px] uppercase tracking-[0.2em] text-black/70">₹499 · 3 Hours</span>
+                  <span className="text-[11px] uppercase tracking-[0.2em] text-black/70">· Hot</span>
                 </motion.div>
               </div>
 
@@ -890,12 +872,13 @@ const WorkshopBooking = () => {
                 </div>
                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
                   <motion.button
-                    onClick={() => setShowForm(true)}
+                   
+                    onClick={() =>{ if (!bookingOpen) return; setShowForm(true)}}
                     className="group inline-flex items-center justify-center gap-3 text-xs uppercase tracking-[0.25em] bg-black text-white px-8 py-4 rounded-full"
                     whileHover={{ scale: 1.02, backgroundColor: "#222" }}
                     whileTap={{ scale: 0.97 }}
                   >
-                    Book Your Seat
+                    Update you soon
                     <ArrowRightIcon className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
                   </motion.button>
                   <button className="inline-flex items-center justify-center text-xs uppercase tracking-[0.25em] text-black/50 border border-black/15 px-8 py-4 rounded-full hover:border-black/40 hover:text-black transition-all duration-300">
@@ -1053,14 +1036,16 @@ const WorkshopBooking = () => {
             <span className="italic">stillness</span><br />
             meets creation."
           </p>
+          <a  href="tel:+916369692363">
           <motion.button
-            onClick={() => setShowForm(true)}
+            
             className="group self-start md:self-auto inline-flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-black border border-black/20 px-8 py-4 rounded-full hover:bg-black hover:text-white transition-all duration-500 whitespace-nowrap"
             whileHover={{ scale: 1.02 }}
           >
             Start Creating
             <ArrowRightIcon className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
           </motion.button>
+          </a>
         </div>
       </motion.section>
 

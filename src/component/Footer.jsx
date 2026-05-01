@@ -104,121 +104,439 @@
 //       </div>
 //     </div>
 //   );
+// // }
+// import React, { useState } from "react";
+// import { useForm, ValidationError } from "@formspree/react";
+// import { FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa";
+
+// export default function Footer() {
+//   const [state, handleSubmit] = useForm("xqagoqqb");
+//   const [showForm, setShowForm] = useState(false);
+
+//   return (
+//     <div id="footer" className="bg-black text-white px-8 py-20 mt-20">
+
+//       {/* TOP SECTION */}
+//       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+
+//         {/* LEFT — BRAND */}
+//         <div>
+//           <h2 className="text-3xl font-medium mb-4">Artiq</h2>
+//           <p className="text-gray-400 text-sm leading-relaxed">
+//             Creating meaningful art experiences through workshops, custom designs,
+//             and creative collaborations.
+//           </p>
+
+//           {/* SOCIALS */}
+//           <div className="flex mt-6 space-x-5">
+//             <a href="https://www.instagram.com/arti_qora/" target="_blank">
+//               <FaInstagram size={20} className="hover:scale-110 transition" />
+//             </a>
+//             <a href="http://wa.me/916369692363" target="_blank">
+//               <FaWhatsapp size={20} className="hover:scale-110 transition" />
+//             </a>
+//             <a href="mailto:info@artiqora.co">
+//               <FaEnvelope size={20} className="hover:scale-110 transition" />
+//             </a>
+//           </div>
+//         </div>
+
+//         {/* MIDDLE — NAVIGATION */}
+//         <div className="grid grid-cols-2 gap-4 text-sm text-gray-400">
+
+//           <div className="space-y-2">
+//             <p className="text-white mb-2">Company</p>
+//             <p className="hover:text-white cursor-pointer">About</p>
+//             <p className="hover:text-white cursor-pointer">Services</p>
+//             <p className="hover:text-white cursor-pointer">FAQ</p>
+//           </div>
+
+//           <div className="space-y-2">
+//             <p className="text-white mb-2">Explore</p>
+//             <p className="hover:text-white cursor-pointer">Workshop</p>
+//             <p className="hover:text-white cursor-pointer">Workspace</p>
+//             <p className="hover:text-white cursor-pointer">Events</p>
+//           </div>
+
+//         </div>
+
+//         {/* RIGHT — CONTACT */}
+//         <div>
+//           <h3 className="text-lg mb-4">Get in touch</h3>
+
+//           {!showForm ? (
+//             <button
+//               onClick={() => setShowForm(true)}
+//               className="border border-white px-6 py-2 rounded-full hover:bg-white hover:text-black transition"
+//             >
+//               Let’s Connect
+//             </button>
+//           ) : (
+//             <form onSubmit={handleSubmit} className="space-y-3 mt-4">
+
+//               <input
+//                 type="text"
+//                 name="name"
+//                 placeholder="Name"
+//                 className="w-full bg-gray-900 border border-gray-700 p-2 text-sm rounded"
+//                 required
+//               />
+
+//               <input
+//                 type="email"
+//                 name="email"
+//                 placeholder="Email"
+//                 className="w-full bg-gray-900 border border-gray-700 p-2 text-sm rounded"
+//                 required
+//               />
+//               <ValidationError field="email" errors={state.errors} />
+
+//               <textarea
+//                 name="message"
+//                 placeholder="Message"
+//                 rows="3"
+//                 className="w-full bg-gray-900 border border-gray-700 p-2 text-sm rounded"
+//                 required
+//               />
+//               <ValidationError field="message" errors={state.errors} />
+
+//               <button
+//                 type="submit"
+//                 disabled={state.submitting}
+//                 className="bg-white text-black px-5 py-2 text-sm rounded hover:bg-gray-300 transition"
+//               >
+//                 {state.submitting ? "Sending..." : "Send"}
+//               </button>
+
+//             </form>
+//           )}
+//         </div>
+
+//       </div>
+
+//       {/* DIVIDER */}
+//       <div className="border-t border-gray-800 mt-16 pt-6 text-center text-gray-500 text-xs">
+//         © 2026 Artiqora — All rights reserved
+//       </div>
+
+//     </div>
+//   );
+// // }
+// import React, { useState } from "react";
+// import { useForm, ValidationError } from "@formspree/react";
+// import { FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa";
+//  import { useNavigate } from "react-router-dom";
+// export default function Footer() {
+//   const [state, handleSubmit] = useForm("xqagoqqb");
+//   const [showForm, setShowForm] = useState(false);
+
+ 
+
+// const navigate = useNavigate();
+
+//   return (
+//     <footer className="bg-black text-white px-6 md:px-12 py-20 mt-24 font-light">
+
+//       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
+
+//         {/* BRAND */}
+//         <div className="space-y-6">
+//           <h2 className="text-2xl tracking-[0.25em] font-light">
+//             ARTIQ
+//           </h2>
+
+//           <div className="w-10 h-[1px] bg-gray-600"></div>
+
+//           <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+//             Sculpting spaces through light, texture, and form.  
+//             Designed to elevate modern interiors with quiet luxury.
+//           </p>
+
+//           <div className="flex gap-6 pt-2 text-gray-400">
+//             <a href="https://www.instagram.com/arti_qora/" target="_blank">
+//               <FaInstagram className="hover:text-white transition" size={18}/>
+//             </a>
+//             <a href="http://wa.me/916369692363" target="_blank">
+//               <FaWhatsapp className="hover:text-white transition" size={18}/>
+//             </a>
+//             <a href="mailto:info@artiqora.co">
+//               <FaEnvelope className="hover:text-white transition" size={18}/>
+//             </a>
+//           </div>
+//         </div>
+
+//         {/* LINKS */}
+//         <div className="grid grid-cols-2 gap-10 text-sm">
+
+//           <div className="space-y-4">
+//             <p className="text-white tracking-widest text-xs">COMPANY</p>
+//             <div className="space-y-2 text-gray-400">
+//   <a onClick={() => navigate("/#about-us")} className="hover:text-white cursor-pointer block">
+//     About
+//   </a>
+//   <a onClick={() => navigate("/#services")} className="hover:text-white cursor-pointer block">
+//     Services
+//   </a>
+//   <a onClick={() => navigate("/#faq")} className="hover:text-white cursor-pointer block">
+//     FAQ
+//   </a>
+//   <a onClick={() => navigate("/#faq")} className="hover:text-white cursor-pointer block">
+//     FAQ
+//   </a>
+// </div>
+//           </div>
+
+//           <div className="space-y-4">
+//             <p className="text-white tracking-widest text-xs">EXPLORE</p>
+//             <div className="space-y-2 text-gray-400">
+//               <p className="hover:text-white cursor-pointer">Workshop</p>
+//               <p className="hover:text-white cursor-pointer">Workspace</p>
+//               <p className="hover:text-white cursor-pointer">Events</p>
+//             </div>
+//           </div>
+
+//         </div>
+
+//         {/* CONTACT */}
+//         <div className="space-y-6">
+//           <h3 className="text-sm tracking-widest">CONTACT</h3>
+
+//           <div className="text-gray-400 text-sm space-y-2 leading-relaxed">
+//             <p>Chennai, India</p>
+//             <p>
+//               <a href="mailto:info@artiqora.co" className="hover:text-white">
+//                 info@artiqora.co
+//               </a>
+//             </p>
+//             <p>
+//               <a href="tel:+916369692363" className="hover:text-white">
+//                 +91 63696 92363
+//               </a>
+//             </p>
+//           </div>
+
+//           <div className="w-10 h-[1px] bg-gray-700"></div>
+
+//           {!showForm ? (
+//             <button
+//               onClick={() => setShowForm(true)}
+//               className="text-sm tracking-widest border-b border-white pb-1 hover:opacity-70 transition"
+//             >
+//               LET’S CONNECT
+//             </button>
+//           ) : (
+//             <form onSubmit={handleSubmit} className="space-y-3">
+
+//               <input
+//                 type="text"
+//                 name="name"
+//                 placeholder="Name"
+//                 className="w-full bg-transparent border-b border-gray-700 p-2 text-sm focus:outline-none"
+//                 required
+//               />
+
+//               <input
+//                 type="email"
+//                 name="email"
+//                 placeholder="Email"
+//                 className="w-full bg-transparent border-b border-gray-700 p-2 text-sm focus:outline-none"
+//                 required
+//               />
+//               <ValidationError field="email" errors={state.errors} />
+
+//               <textarea
+//                 name="message"
+//                 placeholder="Message"
+//                 rows="3"
+//                 className="w-full bg-transparent border-b border-gray-700 p-2 text-sm focus:outline-none"
+//                 required
+//               />
+//               <ValidationError field="message" errors={state.errors} />
+
+//               <button
+//                 type="submit"
+//                 disabled={state.submitting}
+//                 className="text-sm border-b border-white pb-1 hover:opacity-70"
+//               >
+//                 {state.submitting ? "Sending..." : "Send"}
+//               </button>
+
+//             </form>
+//           )}
+//         </div>
+
+//       </div>
+
+//       {/* BOTTOM */}
+//       <div className="mt-20 pt-6 border-t border-gray-800 text-center text-gray-500 text-[11px] tracking-widest">
+//         © 2026 ARTIQORA | All rights reserved | Privacy Policy | Terms of Use
+//       </div>
+
+//     </footer>
+//   );
 // }
+
 import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
   const [state, handleSubmit] = useForm("xqagoqqb");
   const [showForm, setShowForm] = useState(false);
+  const navigate = useNavigate();
 
   return (
-    <div id="footer" className="bg-black text-white px-8 py-20 mt-20">
+    <footer className="bg-black text-white px-6 md:px-12 py-20 mt-24 font-light">
 
-      {/* TOP SECTION */}
-      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
 
-        {/* LEFT — BRAND */}
-        <div>
-          <h2 className="text-3xl font-medium mb-4">Artiq</h2>
-          <p className="text-gray-400 text-sm leading-relaxed">
-            Creating meaningful art experiences through workshops, custom designs,
-            and creative collaborations.
+        {/* BRAND */}
+        <div className="space-y-6">
+          <h2 className="text-2xl tracking-[0.25em] font-light inline-block relative group cursor-default">
+            ARTIQ
+            <span className="absolute left-0 -bottom-1 h-[1px] w-0 bg-white transition-all duration-700 group-hover:w-full" />
+          </h2>
+
+          <div className="w-10 h-[1px] bg-gray-600 relative overflow-hidden">
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-60"
+              style={{ animation: "shimmer 3s ease-in-out infinite" }} />
+          </div>
+
+          <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+            Sculpting spaces through light, texture, and form.
+            Designed to elevate modern interiors with quiet luxury.
           </p>
 
-          {/* SOCIALS */}
-          <div className="flex mt-6 space-x-5">
-            <a href="https://www.instagram.com/arti_qora/" target="_blank">
-              <FaInstagram size={20} className="hover:scale-110 transition" />
+          <div className="flex gap-6 pt-2 text-gray-500">
+            <a href="https://www.instagram.com/arti_qora/" target="_blank" rel="noreferrer"
+              className="hover:text-white transition-all duration-300 hover:-translate-y-1 inline-flex">
+              <FaInstagram size={18} />
             </a>
-            <a href="http://wa.me/916369692363" target="_blank">
-              <FaWhatsapp size={20} className="hover:scale-110 transition" />
+            <a href="http://wa.me/916369692363" target="_blank" rel="noreferrer"
+              className="hover:text-white transition-all duration-300 hover:-translate-y-1 inline-flex">
+              <FaWhatsapp size={18} />
             </a>
-            <a href="mailto:info@artiqora.co">
-              <FaEnvelope size={20} className="hover:scale-110 transition" />
+            <a href="mailto:info@artiqora.co"
+              className="hover:text-white transition-all duration-300 hover:-translate-y-1 inline-flex">
+              <FaEnvelope size={18} />
             </a>
           </div>
         </div>
 
-        {/* MIDDLE — NAVIGATION */}
-        <div className="grid grid-cols-2 gap-4 text-sm text-gray-400">
+        {/* LINKS */}
+        <div className="grid grid-cols-2 gap-10 text-sm">
 
-          <div className="space-y-2">
-            <p className="text-white mb-2">Company</p>
-            <p className="hover:text-white cursor-pointer">About</p>
-            <p className="hover:text-white cursor-pointer">Services</p>
-            <p className="hover:text-white cursor-pointer">FAQ</p>
+          <div className="space-y-4">
+            <p className="text-white tracking-widest text-xs">COMPANY</p>
+            <div className="space-y-2 text-gray-400">
+              {[
+                { label: "About",    hash: "about-us" },
+                { label: "Services", hash: "services" },
+                { label: "FAQ",      hash: "faq"      },
+              ].map(({ label, hash }) => (
+                <a
+                  key={label}
+                  onClick={() => navigate(`/#${hash}`)}
+                  className="hover:text-white cursor-pointer block transition-colors duration-300"
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
           </div>
 
-          <div className="space-y-2">
-            <p className="text-white mb-2">Explore</p>
-            <p className="hover:text-white cursor-pointer">Workshop</p>
-            <p className="hover:text-white cursor-pointer">Workspace</p>
-            <p className="hover:text-white cursor-pointer">Events</p>
+          <div className="space-y-4">
+            <p className="text-white tracking-widest text-xs">EXPLORE</p>
+            <div className="space-y-2 text-gray-400">
+              {[
+                { label: "Workshop",  path: "/#about2"    },
+                { label: "Workspace", path: "/workspace"  },
+                { label: "Products",  path: "/Products"   },
+              ].map(({ label, path }) => (
+                <a
+                  key={label}
+                  onClick={() => navigate(path)}
+                  className="hover:text-white cursor-pointer block transition-colors duration-300"
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
           </div>
 
         </div>
 
-        {/* RIGHT — CONTACT */}
-        <div>
-          <h3 className="text-lg mb-4">Get in touch</h3>
+        {/* CONTACT */}
+        <div className="space-y-6">
+          <h3 className="text-sm tracking-widest">CONTACT</h3>
+
+          <div className="text-gray-400 text-sm space-y-2 leading-relaxed">
+            <p>Chennai, India</p>
+            <a href="mailto:info@artiqora.co" className="hover:text-white block transition-colors duration-300">
+              info@artiqora.co
+            </a>
+            <a href="tel:+916369692363" className="hover:text-white block transition-colors duration-300">
+              +91 63696 92363
+            </a>
+          </div>
+
+          <div className="w-10 h-[1px] bg-gray-700" />
 
           {!showForm ? (
             <button
               onClick={() => setShowForm(true)}
-              className="border border-white px-6 py-2 rounded-full hover:bg-white hover:text-black transition"
+              className="text-sm tracking-widest border-b border-white pb-1 transition-all duration-400 hover:opacity-50 hover:tracking-[0.3em]"
             >
-              Let’s Connect
+              LET'S CONNECT
             </button>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-3 mt-4">
-
+            <form onSubmit={handleSubmit} className="space-y-3" style={{ animation: "slideDown 0.35s ease" }}>
               <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                className="w-full bg-gray-900 border border-gray-700 p-2 text-sm rounded"
-                required
+                type="text" name="name" placeholder="Name" required
+                className="w-full bg-transparent border-b border-gray-700 p-2 text-sm focus:outline-none focus:border-gray-500 transition-colors duration-300"
               />
-
               <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                className="w-full bg-gray-900 border border-gray-700 p-2 text-sm rounded"
-                required
+                type="email" name="email" placeholder="Email" required
+                className="w-full bg-transparent border-b border-gray-700 p-2 text-sm focus:outline-none focus:border-gray-500 transition-colors duration-300"
               />
               <ValidationError field="email" errors={state.errors} />
-
               <textarea
-                name="message"
-                placeholder="Message"
-                rows="3"
-                className="w-full bg-gray-900 border border-gray-700 p-2 text-sm rounded"
-                required
+                name="message" placeholder="Message" rows="3" required
+                className="w-full bg-transparent border-b border-gray-700 p-2 text-sm focus:outline-none focus:border-gray-500 transition-colors duration-300"
               />
               <ValidationError field="message" errors={state.errors} />
-
               <button
-                type="submit"
-                disabled={state.submitting}
-                className="bg-white text-black px-5 py-2 text-sm rounded hover:bg-gray-300 transition"
+                type="submit" disabled={state.submitting}
+                className="text-sm border-b border-white pb-1 hover:opacity-50 transition-opacity duration-300"
               >
-                {state.submitting ? "Sending..." : "Send"}
+                {state.submitting ? "Sending..." : "Send →"}
               </button>
-
+              {state.succeeded && (
+                <p className="text-gray-400 text-xs tracking-widest">Message sent ✓</p>
+              )}
             </form>
           )}
         </div>
 
       </div>
 
-      {/* DIVIDER */}
-      <div className="border-t border-gray-800 mt-16 pt-6 text-center text-gray-500 text-xs">
-        © 2026 Artiqora — All rights reserved
+      {/* BOTTOM */}
+      <div className="mt-20 pt-6 border-t border-gray-800 text-center text-gray-500 text-[11px] tracking-widest">
+        © 2026 ARTIQORA · All rights reserved · Privacy Policy · Terms of Use
       </div>
 
-    </div>
+      <style>{`
+        @keyframes shimmer {
+          0% { transform: translateX(-200%); }
+          60%, 100% { transform: translateX(400%); }
+        }
+        @keyframes slideDown {
+          from { opacity: 0; transform: translateY(-8px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
+
+    </footer>
   );
 }

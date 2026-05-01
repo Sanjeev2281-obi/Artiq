@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
+import { ChevronDown, ShoppingBag, User, Search, Menu, Grid, List, X } from 'lucide-react';
 import Workspace from "../pages/Workspace";
+import popup from '../assets/popup.png';
 function Nav() {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
@@ -20,6 +22,13 @@ function Nav() {
   };
 
   return (
+    <div>
+        <img
+                  src={popup}
+                  alt="Main Top"
+                  className="fixed top-2 left-2 w-26 h-25 rounded-full  z-500000"
+                  draggable={false}
+                />
     <div className="flex justify-end items-center p-7 fixed top-0 left-0 right-0 z-50 bg-white">
 
       {/* Menu Icon */}
@@ -27,7 +36,7 @@ function Nav() {
         className="text-2xl cursor-pointer"
         onClick={() => setOpen(!open)}
       >
-        <i className="fas fa-list text-black"></i>
+        <Menu size={24} />
       </div>
 
       {open && (
@@ -57,21 +66,17 @@ function Nav() {
             Services
           </button>
 
-          <button
-            onClick={() => { closeMenu(); handleScroll("faq"); }}
-           className="font-[outfit] text-black text-left"
-          >
-            FAQ
-          </button>
+         
            <NavLink to="/Workshop"  onClick={() =>  {closeMenu();window.scrollTo({ top: 0, behavior: "smooth" });}} className="font-[outfit] text-black text-left">
-            Workshop
+            Events
+          </NavLink>
+           <NavLink to="/Products"  onClick={() =>  {closeMenu();window.scrollTo({ top: 0, behavior: "smooth" });}} className="font-[outfit] text-black text-left">
+            Products
           </NavLink>
            <NavLink to="/Workspace"  onClick={() =>  {closeMenu();window.scrollTo({ top: 0, behavior: "smooth" });}} className="font-[outfit] text-black text-left">
             Workspace
           </NavLink>
-           <NavLink to="/Events"  onClick={() =>  {closeMenu();window.scrollTo({ top: 0, behavior: "smooth" });}} className="font-[outfit] text-black text-left">
-            Events
-          </NavLink>
+      
           <button
             onClick={() => { closeMenu(); handleScroll("footer"); }}
              className="font-[outfit] text-black text-left"
@@ -80,6 +85,7 @@ function Nav() {
           </button>
         </div>
       )}
+    </div>
     </div>
   );
 }

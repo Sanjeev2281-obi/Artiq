@@ -89,7 +89,7 @@ export default function AnimatedIntro() {
           
           <div
             ref={scrollRef}
-           className="flex gap-6 overflow-x-auto w-full h-auto px-6 md:px-10 mt-20 md:mt-24 py-20 lg:mt-32 scrollbar-hide"
+           className="flex gap-6 overflow-x-auto w-full px-6 md:px-10 mt-29 py-12 scrollbar-hide"//"flex gap-6 overflow-x-auto w-full h-auto px-6 md:px-10 mt-20 md:mt-24 py-20 lg:mt-32 scrollbar-hide"
 
           >
             {prototypes.map((src, index) => (
@@ -115,7 +115,7 @@ function ZoomImage({ src, index }) {
 w-72.5 h-75
 sm:w-62.5 sm:h-72.5
 md:w-[320px] md:h-77.5
-lg:w-85 lg:h-85
+lg:w-85 lg:h-90
 object-cover shadow-lg shrink-0
 transition hover:scale-105 duration-300
 rounded-[30px]

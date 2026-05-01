@@ -60,7 +60,7 @@ const Workspace = () => {
               />
               {/* Subtle index label on image */}
               <span className="absolute top-5 left-5 text-[10px] tracking-[0.25em] uppercase text-white/60">
-                01
+                
               </span>
             </motion.div>
 
@@ -151,7 +151,7 @@ const Workspace = () => {
               <motion.a
                 {...fadeUpView(0.42)}
                 className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-black border border-black/20 px-6 py-3 rounded-full w-fit hover:bg-black hover:text-white transition-all duration-400 group"
-                 href="https://wa.me/919003106936" // replace with your number
+                 href="https://wa.me/916369692363" // replace with your number
   target="_blank"
   rel="noopener noreferrer"
               >
