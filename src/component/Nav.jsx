@@ -26,7 +26,7 @@ function Nav() {
         <img
                   src={popup}
                   alt="Main Top"
-                  className="fixed top-2 left-2 w-26 h-25 rounded-full  z-500000"
+                  className="fixed top-2 left-2 w-26 h-25 rounded-full  z-5000"
                   draggable={false}
                 />
     <div className="flex justify-end items-center p-7 fixed top-0 left-0 right-0 z-50 bg-white">

@@ -326,11 +326,11 @@
 import React, { useState } from 'react';
 import { ChevronDown, ShoppingBag, User, Search, Menu, Grid, List, X } from 'lucide-react';
 import Footer from '../component/Footer';
-import mount1 from '../assets/Mount1.png';
-import mount2 from '../assets/Mount2.png';
-import leaf1 from '../assets/leaf1.png';
-import leaf2 from '../assets/leaf2.png';
-import leaf3 from '../assets/leaf3.png';
+import mount1 from '../assets/Mount1.webp';
+import mount2 from '../assets/Mount2.webp';
+import leaf1 from '../assets/leaf1.webp';
+import leaf2 from '../assets/leaf2.webp';
+import leaf3 from '../assets/leaf3.webp';
 import leaf4 from '../assets/leaf4.png';
 import leaf5 from '../assets/leaf5.png';
 import potterystrinks from '../assets/potterystrinks.png';
@@ -613,11 +613,22 @@ export default function Products() {
               onClick={() => selectProduct(product)}
             >
               <div className="relative w-full max-w-[290px] mx-auto overflow-hidden aspect-[3/4] bg-gray-50">
-                <img
+                {/* <img
                   src={product.images[0]}
                   alt={product.name}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+                  loading="lazy"
+               /> */}
+               <img
+  src={product.images[0]}
+  srcSet={`
+    ${product.images[0]} 800w,
+    ${product.images[0]} 1200w
+  `}
+  sizes="(max-width: 768px) 90vw, 300px"
+  loading="lazy"
+  className="w-full h-full object-cover"
+/>
                 {/* Hover icons */}
                 <div className="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md"><Search size={14}/></div>
