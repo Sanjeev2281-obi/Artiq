@@ -380,7 +380,7 @@ import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 export default function Footer() {
   const [state, handleSubmit] = useForm("xqagoqqb");
   const [showForm, setShowForm] = useState(false);
@@ -523,7 +523,14 @@ export default function Footer() {
 
       {/* BOTTOM */}
       <div className="mt-20 pt-6 border-t border-gray-800 text-center text-gray-500 text-[11px] tracking-widest">
-        © 2026 ARTIQORA · All rights reserved · Privacy Policy · Terms of Use
+        © 2026 ARTIQORA · All rights reserved ·{" "}
+        <Link to="/privacy-policy" className="hover:text-white transition">
+          Privacy Policy
+        </Link>
+        {" · "}
+        <Link to="/terms-of-service" className="hover:text-white transition">
+          Terms of Use
+        </Link>
       </div>
 
       <style>{`

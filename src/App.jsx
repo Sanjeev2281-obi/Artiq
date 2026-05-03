@@ -7,6 +7,8 @@ import Workspace from './pages/Workspace'
 import Events from './pages/Events'
 import Products from './pages/Products'
 import ScrollToTop from './component/ScrollToTop'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsOfService from './pages/TermsOfUse'
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +20,8 @@ function App() {
         <Route path="/Workspace" element={<Workspace />}/>
         <Route path="/Events" element={<Events />}/>
         <Route path="/products" element={<Products />}/>
+        <Route path="/privacy-policy" element={<PrivacyPolicy />}/>
+        <Route path="/terms-of-service" element={<TermsOfService />}/>
       </Routes>
      
     </BrowserRouter>
