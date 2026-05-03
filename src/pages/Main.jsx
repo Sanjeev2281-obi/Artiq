@@ -155,7 +155,7 @@ import About2 from '../component/About2'
 import FAQ from '../component/FAQ'
 import Footer from '../component/Footer'
 import Floatingchatbot from '../component/Flotingchatbot';
-
+import MarqueeStrip from '../component/MarqueeStrip'
 function Main() {
   const location = useLocation();
 
@@ -181,7 +181,7 @@ function Main() {
       <div id="home" className="px-6 md:px-12 lg:px-20">
         <Second />
       </div>
-
+      <MarqueeStrip />
       {/* All main sections — ONE px source, divide-y for visual separation */}
       <div className="relative z-10 bg-gradient-to-b from-transparent to-[#f8f8f6]">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 divide-y divide-gray-100">
@@ -193,7 +193,7 @@ function Main() {
           <section id="services">
             <Serives />
           </section>
-
+          <MarqueeStrip dark />
           <section id="about2">
             <About2 />
           </section>
@@ -210,7 +210,7 @@ function Main() {
       <footer id="footer">
         <Footer />
       </footer>
-
+ 
     </div>
   );
 }
