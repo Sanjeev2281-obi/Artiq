@@ -23,22 +23,26 @@ const Workspace = () => {
     <>
       <div className="min-h-screen bg-white font-[Outfit]">
         {/* Floating logo */}
-        <img
-          src={popup}
-          alt="Decoration"
-          className="fixed top-2 left-2 w-20 h-20 rounded-full z-50"
-          draggable={false}
-        />
-
+        <div className="px-10 mt-[140px] mb-1 flex justify-between items-center border-b border-gray-100 ">
+        <h1 className="text-4xl font-light tracking-tight text-gray-800">WorkSpace</h1>
+       <button
+       onClick={() => navigate('/')}
+       className="text-xs uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors "
+        >
+  Home <span className="mx-2 text-[10px]">▶</span>
+  <span className="text-gray-900">Workspace</span>
+</button>
+      </div>
+        
         {/* ── HERO LABEL ── */}
         <motion.div
           {...fadeUp(0)}
-          className="pt-36 px-6 md:px-20 lg:px-32"
+          className="pt-18 px-6 md:px-20 lg:px-32"
         >
           <p className="text-[13px] uppercase tracking-[0.3em] text-black/40 mb-3">
             The Studio
           </p>
-          <div className="w-full h-px bg-black/10 mb-16" />
+          <div className="w-full h-px bg-black/10 mb-7 " />
         </motion.div>
 
         {/* ── SECTION 1 ── */}

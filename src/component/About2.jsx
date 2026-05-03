@@ -28,17 +28,7 @@ const sections = [
       },
     ],
   },
-  {
-    id: "disclaimer",
-    label: "Note",
-    title: "Disclaimer",
-    blocks: [
-      {
-        heading: null,
-        body: "All artworks are handcrafted. Designs shown are for reference and can be customised based on request.",
-      },
-    ],
-  },
+  
 ];
 
 export default function PremiumSections() {
@@ -46,38 +36,40 @@ export default function PremiumSections() {
     <div className="px-6 md:px-16 py-24 space-y-0 divide-y divide-gray-100 max-w-6xl mx-auto">
       {sections.map((sec, i) => (
         <motion.div
-          key={sec.id}
-          id={sec.id}
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.05 }}
-          className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12 py-16"
-        >
-          {/* Left label + title */}
-          <div className="space-y-2">
-            <p className="text-xs tracking-[0.25em] text-gray-400 uppercase">
-              {sec.label}
-            </p>
-            <h2 className="text-3xl font-light text-gray-800">{sec.title}</h2>
-          </div>
+  key={sec.id}
+  id={sec.id}
+  initial={{ opacity: 0, y: 24 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.7 }}
+  className="grid grid-cols-1 md:grid-cols-[360px_1fr] gap-y-10 md:gap-x-28 py-20"
+>
+  {/* Left */}
+  <div className="space-y-3">
+    <p className="text-xs tracking-[0.25em] text-gray-400 uppercase">
+      {sec.label}
+    </p>
+    <h2 className="text-5xl md:text-6xl font-light text-gray-800 leading-tight">
+      {sec.title}
+    </h2>
+  </div>
 
-          {/* Right content */}
-          <div className="space-y-6">
-            {sec.blocks.map((block, j) => (
-              <div key={j}>
-                {block.heading && (
-                  <p className="text-sm font-medium text-gray-800 mb-2">
-                    {block.heading}
-                  </p>
-                )}
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  {block.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
+  {/* Right */}
+  <div className="space-y-6 max-w-xl mt-4 md:mt-8">
+    {sec.blocks.map((block, j) => (
+      <div key={j}>
+        {block.heading && (
+          <p className="text-sm font-medium text-gray-800 mb-2">
+            {block.heading}
+          </p>
+        )}
+        <p className="text-sm text-gray-500 leading-relaxed">
+          {block.body}
+        </p>
+      </div>
+    ))}
+  </div>
+</motion.div>
       ))}
     </div>
   );
