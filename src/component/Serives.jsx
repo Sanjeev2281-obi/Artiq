@@ -190,20 +190,13 @@ export default function WhatWeDo() {
               className="group cursor-pointer"
             >
               <div className="flex items-start gap-6">
-                
-                
-
-                {/* Content */}
                 <div>
                   <h3 className="text-2xl font-medium text-gray-800 mb-3 group-hover:tracking-wide transition-all duration-300">
                     {item.title}
                   </h3>
-
                   <p className="text-gray-500 leading-relaxed max-w-lg">
                     {item.desc}
                   </p>
-
-                  {/* Subtle underline animation */}
                   <div className="mt-4 h-[1px] w-0 bg-gray-800 group-hover:w-20 transition-all duration-500" />
                 </div>
               </div>
