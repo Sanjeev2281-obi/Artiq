@@ -14,22 +14,27 @@ const fadeUpView = (delay = 0) => ({
   transition: { duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] },
 });
 
-const sections = [
+export const privacyPolicy = [
+  {
+    num: "00",
+    title: "Effective Date",
+    text: "Effective Date: May 2026. This Privacy Policy describes how ARTIQORA Private Limited (“we”, “our”, “us”) collects, uses, and protects your information when you use our platform.",
+  },
   {
     num: "01",
     title: "Information We Collect",
     content: [
       {
         sub: "Personal Information",
-        text: "We may collect your name, email address, and phone number (if provided) when you interact with our platform, submit inquiries, or create an account.",
+        text: "We may collect personal information such as your name, email address, and phone number when you contact us, register, or use our services.",
       },
       {
         sub: "Usage Data",
-        text: "We automatically collect data about pages visited, time spent on the site, and browser and device information to understand how our platform is used.",
+        text: "We automatically collect information such as pages visited, time spent, device type, browser type, and interaction data to improve our services.",
       },
       {
         sub: "Cookies & Tracking",
-        text: "We may use cookies and similar technologies to improve user experience, remember preferences, and analyse traffic patterns across our platform.",
+        text: "We use cookies and similar technologies to enhance user experience, remember preferences, and analyse platform usage. You can control cookies through your browser settings.",
       },
     ],
   },
@@ -37,50 +42,59 @@ const sections = [
     num: "02",
     title: "How We Use Your Information",
     items: [
-      "Provide and continually improve our services",
-      "Respond to inquiries and support requests",
-      "Personalise your experience on the platform",
-      "Monitor and analyse usage to enhance performance",
-      "Send relevant updates or communications (with your consent)",
+      "Provide, operate, and improve our platform",
+      "Respond to inquiries and customer support requests",
+      "Personalise user experience",
+      "Analyse usage and performance",
+      "Send updates or communication with user consent",
     ],
   },
   {
     num: "03",
-    title: "Sharing Your Information",
-    text: "We do not sell your personal data. We may share information with trusted service providers (hosting, analytics) who assist us in operating the platform, and with legal authorities if required by applicable law.",
+    title: "Sharing of Information",
+    text: "We do not sell your personal data. We may share limited information with trusted third-party service providers (such as hosting and analytics providers) who are contractually obligated to protect your data. We may also disclose information if required by law.",
   },
   {
     num: "04",
     title: "Data Security",
-    text: "We implement reasonable and appropriate security measures to protect your personal data from unauthorised access, disclosure, or loss. However, no system is entirely immune — we encourage you to use the platform responsibly.",
+    text: "We implement industry-standard security measures including secure servers, encryption, and access controls to protect your data. However, no system is completely secure, and we cannot guarantee absolute security.",
   },
   {
     num: "05",
-    title: "Your Rights",
-    items: [
-      "Access the personal data we hold about you",
-      "Request correction or deletion of your data",
-      "Opt-out of marketing communications at any time",
-      "Lodge a complaint with a relevant data protection authority",
-    ],
+    title: "Data Retention",
+    text: "We retain personal data only for as long as necessary to fulfil the purposes outlined in this policy, unless a longer retention period is required by law.",
   },
   {
     num: "06",
-    title: "Third-Party Services",
-    text: "We may integrate third-party tools such as analytics and hosting services. These providers may collect data according to their own privacy policies, which we encourage you to review.",
+    title: "Your Rights",
+    items: [
+      "Access your personal data",
+      "Request correction or deletion of your data",
+      "Opt-out of marketing communications",
+      "Withdraw consent where applicable",
+    ],
   },
   {
     num: "07",
-    title: "Changes to This Policy",
-    text: "We may update this Privacy Policy from time to time to reflect changes in our practices or legal obligations. Updated versions will be posted on this page with a revised date.",
+    title: "Children’s Privacy",
+    text: "Our platform is not intended for individuals under the age of 18. We do not knowingly collect personal data from children.",
   },
   {
     num: "08",
+    title: "Third-Party Services",
+    text: "We may use third-party services such as analytics or hosting providers. These services may collect information according to their own privacy policies.",
+  },
+  {
+    num: "09",
+    title: "Changes to This Policy",
+    text: "We may update this Privacy Policy from time to time. Updates will be posted on this page with a revised effective date.",
+  },
+  {
+    num: "10",
     title: "Contact Us",
-    text: "If you have any questions, requests, or concerns about this Privacy Policy or how we handle your data, please reach out to us at support@artiqora.com — we're happy to help.",
+    text: "ARTIQORA Private Limited, Chennai, Tamil Nadu, India. For any questions or requests regarding this policy, contact us at support@artiqora.com.",
   },
 ];
-
 const PrivacyPolicy = () => {
   return (
     <>
@@ -126,7 +140,7 @@ const PrivacyPolicy = () => {
         {/* ── SECTIONS ── */}
         <section className="px-6 md:px-20 lg:px-32 py-6">
           <div className="max-w-7xl mx-auto">
-            {sections.map((section) => (
+            {privacyPolicy.map((section) => (
               <motion.div
                 key={section.num}
                 {...fadeUpView(0)}

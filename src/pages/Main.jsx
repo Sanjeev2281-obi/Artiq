@@ -193,7 +193,7 @@ function Main() {
           <section id="services">
             <Serives />
           </section>
-          <MarqueeStrip dark />
+          {/* <MarqueeStrip dark /> */}
           <section id="about2">
             <About2 />
           </section>

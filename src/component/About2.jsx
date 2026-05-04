@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 const sections = [
   {
     id: "Artist",
-    label: "Experience",
-    title: "Workshop",
+    label: "Events",
+    title: "Experience",
     blocks: [
       {
         heading: null,

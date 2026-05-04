@@ -14,83 +14,92 @@ const fadeUpView = (delay = 0) => ({
   transition: { duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] },
 });
 
-const sections = [
+export const sections = [
+  {
+    num: "00",
+    title: "Acceptance of Terms",
+    text: "By accessing or using ARTIQORA, you agree to be bound by these Terms of Use. If you do not agree, please do not use the platform.",
+  },
   {
     num: "01",
     title: "Use of Service",
-    text: "By accessing or using ARTIQORA, you agree to use our platform only for lawful purposes and in a manner that does not harm, disrupt, or interfere with the platform or the experience of other users.",
+    text: "You agree to use the platform only for lawful purposes and in a manner that does not harm, disrupt, or interfere with the platform or other users.",
   },
   {
     num: "02",
     title: "User Accounts",
     items: [
-      "You are solely responsible for maintaining the security and confidentiality of your account credentials",
-      "You must provide accurate, current, and complete information when creating your account",
-      "You are responsible for all activity that occurs under your account",
-      "You must notify us immediately of any unauthorised access or security breach",
+      "You are responsible for maintaining the confidentiality of your account",
+      "You must provide accurate and complete information",
+      "You are responsible for all activities under your account",
+      "You must notify us of any unauthorized access",
     ],
   },
   {
     num: "03",
     title: "Intellectual Property",
-    text: "All content on ARTIQORA — including design, text, graphics, photographs, artworks, and the ARTIQORA logo — is the exclusive intellectual property of ARTIQORA Private Limited and may not be copied, reproduced, distributed, or reused without express written permission.",
+    text: "All content on ARTIQORA, including designs, text, graphics, images, and branding, is the property of ARTIQORA Private Limited. Unauthorized use, reproduction, or distribution is strictly prohibited and may result in legal action.",
   },
   {
     num: "04",
-    title: "Limitation of Liability",
-    content: [
-      {
-        sub: "Not responsible for",
-        text: "Any indirect, incidental, consequential, or punitive damages arising from your use of the platform, data loss, or service interruptions.",
-      },
-      {
-        sub: "Use at your own risk",
-        text: "The platform is provided on an 'as-is' basis. While we strive for reliability and quality, we make no warranties regarding uninterrupted access or error-free operation.",
-      },
-    ],
+    title: "Payments and Services",
+    text: "If you purchase products or services, you agree to provide accurate payment information. Pricing, availability, and service details may change without prior notice.",
   },
   {
     num: "05",
-    title: "Termination",
-    text: "ARTIQORA Private Limited reserves the right, at its sole discretion, to suspend or permanently terminate access to the platform for any user who violates these Terms of Use or engages in conduct deemed harmful to the platform, its users, or its partners.",
-  },
-  {
-    num: "06",
-    title: "Third-Party Links",
-    text: "Our platform may contain links to external websites or third-party services. These are provided for convenience only. We are not responsible for the content, accuracy, privacy practices, or terms of any third-party sites.",
-  },
-  {
-    num: "07",
-    title: "User-Generated Content",
-    text: "If you submit, upload, or share any content on our platform, you grant ARTIQORA a non-exclusive, royalty-free licence to use, display, and distribute that content in connection with our services. You remain the owner of your content.",
-  },
-  {
-    num: "08",
-    title: "Prohibited Conduct",
-    items: [
-      "Attempting to reverse-engineer, scrape, or extract data from the platform",
-      "Impersonating any person or entity, or misrepresenting your affiliation",
-      "Uploading or transmitting harmful, offensive, or unlawful content",
-      "Using the platform for unauthorised commercial activities or spam",
+    title: "Limitation of Liability",
+    content: [
+      {
+        sub: "No Liability",
+        text: "We are not liable for indirect, incidental, or consequential damages arising from use of the platform.",
+      },
+      {
+        sub: "Use at Your Own Risk",
+        text: "The platform is provided on an 'as-is' basis without warranties of any kind.",
+      },
     ],
   },
   {
+    num: "06",
+    title: "Termination",
+    text: "We reserve the right to suspend or terminate access to the platform at our discretion if users violate these terms.",
+  },
+  {
+    num: "07",
+    title: "Third-Party Links",
+    text: "We are not responsible for content or practices of third-party websites linked from our platform.",
+  },
+  {
+    num: "08",
+    title: "User Content",
+    text: "By submitting content, you grant ARTIQORA a non-exclusive, royalty-free license to use and display it for service-related purposes.",
+  },
+  {
     num: "09",
-    title: "Changes to Terms",
-    text: "We may update these Terms of Use at any time. Any significant changes will be communicated via the platform or email. Continued use of ARTIQORA after such updates constitutes your acceptance of the revised terms.",
+    title: "Prohibited Conduct",
+    items: [
+      "Attempting to hack, scrape, or reverse engineer the platform",
+      "Uploading harmful or illegal content",
+      "Impersonating others",
+      "Using the platform for spam or unauthorized business",
+    ],
   },
   {
     num: "10",
-    title: "Governing Law",
-    text: "These Terms of Use are governed by and construed in accordance with the laws of India. Any disputes arising out of or in connection with these terms shall be subject to the exclusive jurisdiction of the courts of Chennai, Tamil Nadu.",
+    title: "Changes to Terms",
+    text: "We may update these Terms at any time. Continued use of the platform means you accept the updated terms.",
   },
   {
     num: "11",
+    title: "Governing Law",
+    text: "These Terms are governed by the laws of India. Any disputes shall be subject to the jurisdiction of courts in Chennai, Tamil Nadu.",
+  },
+  {
+    num: "12",
     title: "Contact",
-    text: "For questions, concerns, or formal notices relating to these Terms of Use, please contact our team at support@artiqora.com. We aim to respond within 2–3 business days.",
+    text: "For any questions regarding these Terms, contact support@artiqora.com.",
   },
 ];
-
 const TermsOfUse = () => {
   return (
     <>

@@ -765,59 +765,7 @@ const WorkshopBooking = () => {
         </div>
       </section>
 
-      {/* ══ VIDEO ══ */}
-     <section className="px-4 md:px-12 mb-32 max-w-7xl mx-auto">
-        <motion.div
-          className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-black/30 mb-3">In Action</p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-black leading-tight">
-              Pottery<br /><span className="italic font-extralight">Workshop</span>
-            </h2>
-          </div>
-          <p className="text-[15px] text-black/45 max-w-xs leading-relaxed">
-            Watch real artisans shape clay into beautiful pottery. Calm, creative, hands-on.
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="relative rounded-3xl overflow-hidden group"
-          initial={{ opacity: 0, scale: 0.97 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <video
-            src={potteryVideo}
-            autoPlay muted loop playsInline preload="none"
-            className="w-full h-[420px] md:h-[560px] lg:h-[640px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-1000"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
-
-          <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <div className="text-white">
-              <p className="text-xs uppercase tracking-[0.25em] text-white/50 mb-2">Live Creation</p>
-              <h3 className="text-2xl md:text-4xl font-light tracking-tight">From raw clay → handcrafted art</h3>
-            </div>
-            <motion.button
-             
-              className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-black bg-white px-6 py-3 rounded-full hover:bg-white/90 transition-colors duration-300 self-start md:self-auto whitespace-nowrap"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              Join Workshop <ArrowRightIcon className="h-3.5 w-3.5" />
-            </motion.button>
-          </div>
-   
-          {/* spinning badge */}
-          
-        </motion.div>
-        
-      </section>
+     
 
       {/* ══ BOOKING ══ */}
       <section  className="relative px-4 md:px-12 mb-32 max-w-7xl mx-auto">
