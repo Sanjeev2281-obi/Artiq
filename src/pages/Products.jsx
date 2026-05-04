@@ -343,7 +343,6 @@ import panel3 from '../assets/panel3.webp';
 import peek1 from '../assets/peek1.webp';
 import peek2 from '../assets/peek2.webp';
 import peek3 from '../assets/peek3.webp';
-import popup from '../assets/popup.png';
 import { NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { Phone, MapPin } from 'lucide-react';
@@ -584,9 +583,7 @@ export default function Products() {
   return (
     <div className="bg-white min-h-screen mt-20 font-[Outfit]">
 
-      <NavLink to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-        <img src={popup} alt="Artiq" className="fixed top-2 left-2 w-26 h-25 rounded-full z-50" draggable={false} />
-      </NavLink>
+      
 
       {/* Page header */}
       <div className="px-10 py-8 flex justify-between items-center border-b border-gray-100">

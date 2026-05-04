@@ -452,7 +452,6 @@ import p8 from "../assets/work.jpg";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { motion, useScroll, useTransform, useInView, AnimatePresence } from "framer-motion";
 import Footer from "../component/Footer.jsx";
-import popup from '../assets/popup.png';
 import { NavLink } from "react-router-dom";
 import potteryVideo from '../assets/pottery_workshop.MOV';
 
@@ -607,9 +606,7 @@ const WorkshopBooking = () => {
       <Particles />
 
       {/* LOGO */}
-      <NavLink to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-        <img src={popup} alt="Logo" className="fixed top-2 left-2 w-26 h-25 rounded-full z-50" draggable={false} />
-      </NavLink>
+      
 
       {/* ══ HERO ══ */}
       <section ref={heroRef} className="relative min-h-[92vh] flex flex-col items-center justify-center overflow-hidden pt-20">

@@ -136,7 +136,7 @@ function Nav() {
     <>
       {/* ── NAV BAR ── */}
       <div
-        className="flex justify-between items-center px-6 md:px-12 py-5 fixed top-0 left-0 right-0 z-[500]"
+        className="flex justify-between items-center px-6 md:px-12 py-5 fixed top-0 left-0 right-0 z-500"
         style={{
           backgroundColor: "rgba(255,255,255,0.95)",
           backdropFilter: "blur(12px)",
@@ -144,10 +144,10 @@ function Nav() {
         }}
       >
         {/* Logo */}
-       <NavLink to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-               <img src={popup} alt="Logo" className="fixed top-2 left-2 w-26 h-25 rounded-full z-50" draggable={false} />
+     
+  <NavLink to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+               <img src={popup} alt="Logo" className="fixed top-0 left-1 w-23 h-23 rounded-full z-50" draggable={false} />
              </NavLink>
-
         {/* Right side — menu toggle */}
         <button
           onClick={() => setOpen(!open)}

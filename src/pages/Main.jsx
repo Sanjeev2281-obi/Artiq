@@ -174,9 +174,9 @@ function Main() {
             radial-gradient(circle_at_80%_70%,rgba(0,0,0,0.04),transparent_40%)]" 
       />
 
-      {/* Hero */}
+      
       <Prototype />
-
+     
       {/* Second — sits just below hero, no section wrapper needed */}
       <div id="home" className="px-6 md:px-12 lg:px-20">
         <Second />

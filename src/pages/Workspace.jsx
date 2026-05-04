@@ -1,7 +1,6 @@
 import React from "react";
 import studioImg1 from "../assets/s1.jpg";
 import studioImg2 from "../assets/s2.jpg";
-import popup from "../assets/popup.png";
 import Footer from "../component/Footer";
 import { motion } from "framer-motion";
 
