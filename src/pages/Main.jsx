@@ -207,7 +207,7 @@ function Main() {
 
       <Floatingchatbot />
 
-      <footer id="footer">
+      <footer id="footer" className="dark-footer bg-white">
         <Footer />
       </footer>
  

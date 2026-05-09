@@ -522,7 +522,7 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM */}
-      <div className="mt-20 pt-6 border-t border-gray-800 text-center text-gray-500 text-[11px] tracking-widest">
+      <div className="mt-20 pt-6 border-t border-gray-800 text-center text-gray-500 text-[15px] tracking-widest">
         © 2026 ARTIQORA · All rights reserved ·{" "}
         <Link to="/privacy-policy" className="hover:text-white transition">
           Privacy Policy

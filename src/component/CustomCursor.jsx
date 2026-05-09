@@ -22,9 +22,34 @@ export default function CustomCursor() {
     // Hide on touch
     if ("ontouchstart" in window) { setHidden(true); return; }
 
+    // const onMove = (e) => {
+    //   //pos.current = { x: e.clientX, y: e.clientY };
+     
+    // };
     const onMove = (e) => {
-      pos.current = { x: e.clientX, y: e.clientY };
-    };
+  pos.current = { x: e.clientX, y: e.clientY };
+
+  const element = document.elementFromPoint(
+    e.clientX,
+    e.clientY
+  );
+
+  const darkSection = element?.closest(".dark-footer");
+
+  setHovered((prev) => prev);
+
+  if (dotRef.current && ringRef.current) {
+    if (darkSection) {
+      dotRef.current.style.backgroundColor = "#fff";
+      ringRef.current.style.border =
+        "1px solid rgba(255,255,255,0.6)";
+    } else {
+      dotRef.current.style.backgroundColor = "#000";
+      ringRef.current.style.border =
+        "1px solid rgba(0,0,0,0.35)";
+    }
+  }
+};
 
     const onDown = () => setClicked(true);
     const onUp = () => setClicked(false);
