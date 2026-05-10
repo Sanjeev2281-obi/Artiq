@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ChevronDown, ShoppingBag, User, Search, Menu, Grid, List, X } from 'lucide-react';
 import Footer from '../component/Footer';
@@ -36,9 +35,9 @@ const products = [
         // Detail View
     ],
     description: 'The Ethereal Flow wall light is a masterpiece of organic design. Its fluid, wave-like form is finished in a deep black texture that contrasts beautifully with the soft, warm glow of its internal LED system.',
-    details: 'Dimensions: 45cm x 50cm. Integrated 2700K warm-white LED strips. Hardwired installation.',
-    materials: 'Hand-sculpted composite shell, matte carbon-black finish. Light-diffusing acrylic interior.',
-    commitment: 'Handcrafted to order. 2-year warranty on electronic components.'
+    details: 'Ethereal Cascade blends ambient lighting with sculptural artistry, creating a soft luxurious glow for modern interiors. Sized at 3 ft (H) × 2.5 ft (W), it is designed to add depth, elegance, and visual presence to any space.',
+    materials: 'Crafted with premium composite materials, a matte textured finish, and integrated acrylic LED diffusion for a seamless warm radiance. Clean gently using a dry microfiber cloth.',
+    commitment: 'Every Artiq piece is crafted with precision, premium materials, and timeless design aesthetics — including Artiq’s signature luxury packaging for a refined unboxing experience.'
   },
   {
     id: 2,
