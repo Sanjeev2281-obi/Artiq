@@ -1,19 +1,12 @@
 import { useEffect } from "react";
 
-/**
- * useContentProtection
- * Drop this hook into App.jsx — protects the entire site.
- * - Disables right-click
- * - Disables text selection
- * - Disables image drag
- * - Blocks Ctrl+S, Ctrl+U, Ctrl+A, Ctrl+C, F12, Ctrl+Shift+I/J/C
- */
+
 export function useContentProtection() {
   useEffect(() => {
-    // ── Disable right-click ──
+  
     const handleContextMenu = (e) => e.preventDefault();
 
-    // ── Disable keyboard shortcuts ──
+   
     const handleKeyDown = (e) => {
       const blocked =
         e.key === "F12" ||
